@@ -862,7 +862,7 @@ export default function App() {
 
     <div style={{padding:"20px 24px",borderBottom:"1px solid #eee",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
       <div>
-        <h1 style={{margin:0,fontSize:24,fontFamily:FH,color:"#1a1a1a",fontWeight:700,letterSpacing:"-0.02em"}}>Mercier Budget</h1>
+        <h1 style={{margin:0,fontSize:24,fontFamily:FH,color:"#1a1a1a",fontWeight:700,letterSpacing:"-0.02em"}}>Next Chapter Budget</h1>
         <div style={{fontSize:12,color:"#888",marginTop:2}}>{transactions.length} transactions · {Object.keys(monthlyHistory).length} months of history</div>
       </div>
       <div style={{fontSize:13,color:GREEN,fontWeight:600}}>Cash: {fmt(Object.values(accounts).reduce((s,a)=>s+(a.balance||0),0))}</div>
