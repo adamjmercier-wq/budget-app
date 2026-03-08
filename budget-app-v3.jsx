@@ -557,7 +557,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
   return <div className="ncb-tab-content" style={{padding:24}}>
     <div>
       <h2 style={{margin:"0 0 4px",fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Debt Strategy</h2>
-      <p style={{color:GRAY,margin:"0 0 4px",fontSize:14}}>Baby Step 2: Pay off all debt except the house. Surplus flows here.</p>
+      <p style={{color:GRAY,margin:"0 0 4px",fontSize:14}}>Primary Goal: Pay off all debt except the house. Surplus flows here.</p>
       <LastUpdated dates={{debt:lastUpdated.debt}} />
     </div>
 
@@ -620,7 +620,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
     {/* Mortgage section */}
     <div style={{marginTop:24,marginBottom:20}}>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
-        <Sec>Baby Step 6: Mortgage</Sec>
+        <Sec>Mortgage</Sec>
         <button onClick={()=>setEditMtg(!editMtg)} style={{border:"none",background:"none",color:"#aaa",cursor:"pointer",fontSize:12}}>{editMtg?"done":"edit"}</button>
       </div>
       <div className="ncb-mtg-grid" style={{background:"#f8f9fa",borderRadius:10,padding:16}}>
@@ -748,7 +748,7 @@ function CatMgr({categories,setCategories,categoryGroups,setCategoryGroups,proje
     <div style={{marginBottom:24}}>
       <Sec>Add New Group</Sec>
       <div className="ncb-add-form" style={{display:"flex",gap:10}}>
-        <input value={newG} onChange={e=>setNewG(e.target.value)} placeholder="e.g. NC Homeschooling" style={{...inp,width:220}} />
+        <input value={newG} onChange={e=>setNewG(e.target.value)} placeholder="e.g. Travel" style={{...inp,width:220}} />
         <button onClick={addGroup} style={{padding:"8px 16px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add Group</button>
       </div>
     </div>
