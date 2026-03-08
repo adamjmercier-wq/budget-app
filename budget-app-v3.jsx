@@ -1031,6 +1031,7 @@ export default function App() {
   const [categories,setCategories] = useState(DEFAULT_CATEGORIES);
   const [categoryGroups,setCategoryGroups] = useState(DEFAULT_GROUPS);
   const [accounts,setAccounts] = useState(DEFAULT_ACCTS);
+  const [monthlyHistory,setMonthlyHistory] = useState(SEED_HISTORY);
   const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:"",settings:""});
 
   useEffect(()=>{
