@@ -39,7 +39,7 @@ const DEFAULT_GROUPS = {
 
 const DEFAULT_PROJ = {};
 
-const DEFAULT_INC = {"Income Source 1":0};
+const DEFAULT_INC = {};
 
 const DEFAULT_LOANS = [];
 
@@ -225,6 +225,7 @@ function ImportTab({onImport,transactions,accounts,setAccounts,setLastUpdated}) 
     <div style={{marginTop:32}}>
       <Sec>Account Balances</Sec>
       <p style={{fontSize:13,color:"#888",margin:"0 0 12px"}}>Auto-populated from imports. Adjust manually anytime.</p>
+      {Object.keys(accounts).length===0 && <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:12,fontSize:13,color:"#888",textAlign:"center"}}>No accounts yet — add them in Settings, or they'll be created automatically when you import.</div>}
       <div style={{display:"grid",gap:12,gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))"}}>
         {Object.entries(accounts).map(([n,info])=><div key={n} style={{background:"#f8f9fa",borderRadius:10,padding:16}}>
           <div style={{fontSize:13,fontWeight:600,color:"#444",marginBottom:8}}>{n}</div>
@@ -277,7 +278,7 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,accoun
     const today = new Date().toISOString().split("T")[0];
     onAdd({id:crypto.randomUUID(),...newTx,amount:parseFloat(newTx.amount),autoMatched:true,isIncome:newTx.category==="Income"});
     setLastUpdated(p=>({...p,transactions:today}));
-    setNewTx({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:"Rockland",isIncome:false});
+    setNewTx({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account: accountList[0] || "",isIncome:false});
     setShowAdd(false);
   }
 
@@ -522,7 +523,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
 
   // Mortgage timeline
   const mtgTimeline = useMemo(()=>{
-    if (!showTL || !mortgage) return null;
+    if (!showTL || !mortgage || mortgage.balance <= 0) return null;
     // Calculate months until loans are done
     const loansFreedDate = timeline?.events.find(e=>e.type==="debtfree");
     const monthsToFreedom = loansFreedDate?.month || 0;
@@ -1030,7 +1031,7 @@ export default function App() {
   const [categories,setCategories] = useState(DEFAULT_CATEGORIES);
   const [categoryGroups,setCategoryGroups] = useState(DEFAULT_GROUPS);
   const [accounts,setAccounts] = useState(DEFAULT_ACCTS);
-  const [monthlyHistory,setMonthlyHistory] = useState(SEED_HISTORY);
+  const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:"",settings:""});
   const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:""});
 
   useEffect(()=>{
