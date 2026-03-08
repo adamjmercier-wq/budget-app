@@ -695,7 +695,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
 
         {/* Mortgage projection */}
         {mtgTimeline && <div style={{marginTop:20,borderTop:"2px solid #e9ecef",paddingTop:16}}>
-          <div style={{fontSize:14,fontWeight:700,color:"#333",marginBottom:8}}>Baby Step 6: Mortgage Payoff</div>
+          <div style={{fontSize:14,fontWeight:700,color:"#333",marginBottom:8}}>Mortgage Payoff</div>
           <div className="ncb-mtg-payoff-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:12}}>
             <div style={{background:"#f8f9fa",borderRadius:8,padding:"10px 12px"}}>
               <div style={{fontSize:11,color:"#888"}}>Scheduled End</div>
@@ -1032,7 +1032,6 @@ export default function App() {
   const [categoryGroups,setCategoryGroups] = useState(DEFAULT_GROUPS);
   const [accounts,setAccounts] = useState(DEFAULT_ACCTS);
   const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:"",settings:""});
-  const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:""});
 
   useEffect(()=>{
     async function init() {
