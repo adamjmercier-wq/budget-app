@@ -16,46 +16,35 @@ const SK = {
 // ============================================================
 // SEED DATA
 // ============================================================
-const SEED_HISTORY = {"2025-02":{"Car Payment":1000,"Coffee":251.4,"Dance":45.32,"Disney":15.99,"Gasoline":573.32,"Google One":2.13,"Groceries":1678.62,"Heat":229.95,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":277.5,"Mortgage":3032.22,"Peacock":7.99,"Personal":994.9},"2025-03":{"Car Payment":1608.91,"Coffee":445.31,"Dance":45.32,"Disney":15.99,"Gasoline":541.38,"Google One":2.13,"Groceries":2081.8,"Heat":268.41,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":223.33,"Mortgage":3032.22,"Moving":3871.84,"PBS":7,"Peacock":7.99,"Personal":671.1,"Prime":134.86},"2025-04":{"Car Payment":1000,"Coffee":429.04,"Disney":15.99,"Gasoline":478.71,"Google One":2.13,"Groceries":2024.19,"Heat":217.87,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":103.52,"Mortgage":3032.22,"Moving":2171.99,"Peacock":7.99,"Personal":2346.25,"Water/Sewer":258.46},"2025-05":{"Audible":14.95,"Car Payment":1000,"Coffee":345.96,"Disney":15.99,"Gasoline":260.53,"Google One":2.13,"Groceries":2593.25,"Heat":163.06,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":119.34,"Mortgage":3032.22,"Moving":1934.63,"Peacock":7.99,"Personal":1140.84},"2025-06":{"Audible":14.95,"Car Insurance":1806.3,"Coffee":193.66,"Disney":15.99,"Gasoline":330.92,"Google One":2.13,"Groceries":3575.29,"Gym":120,"Heat":112.4,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":327.34,"Moving":1685.13,"Peacock":7.99,"Personal":1888.28,"Tex":75},"2025-07":{"Audible":14.95,"Car Insurance":328.35,"Coffee":113.82,"Disney":15.99,"Electric":23.79,"Gasoline":664.16,"Google One":5.33,"Groceries":3295.75,"Gym":80,"Heat":37.43,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":110.31,"Mortgage":2120.02,"Peacock":7.99,"Personal":2095.83,"Tex":75},"2025-08":{"Audible":14.95,"Car Payment":300,"Coffee":262.01,"Disney":15.99,"Electric":194.94,"Gasoline":282.57,"Google One":4,"Groceries":2672.93,"Gym":80,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":972.47,"Mortgage":2120.02,"PBS":7,"Peacock":10.99,"Personal":2880.97,"Tex":75},"2025-09":{"Audible":14.95,"Car Payment":300,"Coffee":158.21,"Dance":51.5,"Disney":15.99,"Electric":232.28,"Gasoline":432.93,"Gifts/Events":362.64,"Google One":19.63,"Groceries":2310.96,"Gym":80,"Heat":650,"Internet":76.01,"Life Insurance":23.15,"Meds/Doctor":98.86,"Mortgage":2120.02,"PBS":4.99,"Peacock":10.99,"Personal":1612.11,"Tex":75},"2025-10":{"Audible":14.95,"Car Payment":300,"Coffee":230.47,"Dance":51.5,"Disney":38.99,"Electric":212.99,"Gasoline":419.89,"Gifts/Events":1188,"Google One":21.39,"Groceries":2918.13,"Gym":80,"Heat":667.67,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":434.88,"Mortgage":2120.02,"Netflix":7.99,"Peacock":10.99,"Personal":1197.65,"Student Loan":308.84,"Tex":75},"2025-11":{"Car Payment":300,"Coffee":102.96,"Dance":226.5,"Disney":38.99,"Electric":183.61,"Gasoline":245.97,"Gifts/Events":195,"Google One":33.49,"Groceries":1899.82,"Gym":80,"Heat":377.18,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":185.65,"Mortgage":2120.02,"Netflix":7.99,"Personal":1850.74,"Pets":98.26,"Student Loan":407.22,"Tex":75,"Water/Sewer":456},"2025-12":{"Car Insurance":1641.9,"Dance":51.5,"Electric":215.09,"Gym":80,"Heat":309.98,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":1621.97,"Mortgage":2120.02,"Personal":1910.13,"Student Loan":98.38,"Tex":75,"Xbox":15.93},"2026-01":{"Car Payment":300,"Coffee":173.18,"Dance":21.88,"Disney":38.99,"Electric":294.52,"Gasoline":449.54,"Gifts/Events":526.41,"Google One":20.24,"Groceries":2372.22,"Heat":593.96,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":2159.41,"Mortgage":2120.02,"Netflix":7.99,"PBS":4.99,"Peacock":10.99,"Personal":1489.49,"Pets":154.32,"SimpliSafe":32.99,"Student Loan":407.22,"Xbox":15.93}};
+const SEED_HISTORY = {};
 
 const DEFAULT_CATEGORIES = [
-  "Mortgage","Life Insurance","Electric","Heat","Internet","Dance","Water/Sewer","SimpliSafe",
+  "Mortgage","Rent","Electric","Heat","Internet","Water/Sewer",
   "Car Payment","Student Loan","Gasoline","Car Insurance",
-  "Groceries","Coffee","Pets","Meds/Doctor","Gym","Tex",
-  "Personal","Disney","Peacock","PBS","Netflix","Audible","Google One","Xbox","Prime",
-  "Gifts/Events","Moving","Consulting Expense","Income","Ignore"
+  "Groceries","Dining Out","Pets","Meds/Doctor","Gym",
+  "Personal","Gifts/Events",
+  "Netflix","Spotify","Amazon Prime",
+  "Income","Ignore"
 ];
 
 const DEFAULT_GROUPS = {
-  "Bills":["Mortgage","Life Insurance","Electric","Heat","Internet","Dance","Water/Sewer","SimpliSafe"],
-  "Debt/Projects":["Car Payment","Student Loan"],
+  "Bills":["Mortgage","Rent","Electric","Heat","Internet","Water/Sewer"],
+  "Debt":["Car Payment","Student Loan"],
   "Transportation":["Gasoline","Car Insurance"],
-  "Food":["Groceries","Coffee","Pets"],
-  "Health":["Meds/Doctor","Gym","Tex"],
-  "Personal":["Personal","Gifts/Events","Moving"],
-  "Subscriptions":["Disney","Peacock","PBS","Netflix","Audible","Google One","Xbox","Prime"],
-  "Business":["Consulting Expense"],
+  "Food":["Groceries","Dining Out","Pets"],
+  "Health":["Meds/Doctor","Gym"],
+  "Personal":["Personal","Gifts/Events"],
+  "Subscriptions":["Netflix","Spotify","Amazon Prime"],
 };
 
-const DEFAULT_PROJ = {"Mortgage":2293.28,"Life Insurance":23.15,"Electric":250,"Heat":200,"Internet":80,"Dance":51.5,"Water/Sewer":0,"SimpliSafe":33,"Car Payment":300,"Student Loan":407.22,"Gasoline":400,"Car Insurance":0,"Groceries":1500,"Coffee":150,"Pets":150,"Meds/Doctor":50,"Gym":0,"Tex":0,"Personal":200,"Gifts/Events":0,"Moving":0,"Disney":38.99,"Peacock":11,"PBS":7,"Netflix":0,"Audible":15,"Google One":4,"Xbox":0,"Prime":0,"Consulting Expense":0};
+const DEFAULT_PROJ = {};
 
-const DEFAULT_INC = {"Theresa 1":2191.35,"Theresa 2":2191.35,"Adam (Consulting/Driving)":2000,"Other":0};
+const DEFAULT_INC = {"Income Source 1":0};
 
-const DEFAULT_LOANS = [
-  {id:"l1",name:"T Loan #2",balance:2467.6,rate:6.55,minPay:15.67,endDate:"2036-08"},
-  {id:"l2",name:"T Loan #1",balance:5581.98,rate:6.55,minPay:34.32,endDate:"2036-08"},
-  {id:"l3",name:"T Loan #5",balance:10729.04,rate:4.05,minPay:69.28,endDate:"2036-04"},
-  {id:"l4",name:"A Loan 4",balance:10832.7,rate:8.08,minPay:19.48,endDate:"2037-03"},
-  {id:"l5",name:"A Loan 3",balance:11154.91,rate:8.08,minPay:19.75,endDate:"2037-08"},
-  {id:"l6",name:"A Loan 2",balance:11326.43,rate:7.05,minPay:19.72,endDate:"2037-05"},
-  {id:"l7",name:"T Loan #3",balance:14005.01,rate:6.35,minPay:83.26,endDate:"2036-08"},
-  {id:"l8",name:"T Loan #4",balance:16600.38,rate:5.83,minPay:105.94,endDate:"2036-07"},
-  {id:"l9",name:"2020 Ascent (Car)",balance:16665.98,rate:5.56,minPay:297.39,endDate:"2031-07"},
-  {id:"l10",name:"A Loan 1",balance:23153.26,rate:7.05,minPay:39.43,endDate:"2037-05"},
-];
+const DEFAULT_LOANS = [];
 
-const DEFAULT_MORTGAGE = {balance:249656.8,rate:6.5,minPay:2293.28,endDate:"2055-06"};
-const DEFAULT_ACCTS = {"Rockland":{balance:0,lastUpdated:""},"Passumpsic":{balance:0,lastUpdated:""}};
+const DEFAULT_MORTGAGE = {balance:0,rate:0,minPay:0,endDate:""};
+const DEFAULT_ACCTS = {};
 
 // ============================================================
 // AUTO-CATEGORIZATION
@@ -215,13 +204,13 @@ function ImportTab({onImport,transactions,accounts,setAccounts,setLastUpdated}) 
 
   return <div style={{padding:24}}>
     <h2 style={{margin:"0 0 8px",fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Import Bank Exports</h2>
-    <p style={{color:GRAY,margin:"0 0 24px",fontSize:14}}>Upload .xlsx exports from Rockland or Passumpsic. Auto-categorized — review flagged items in Transactions.</p>
+    <p style={{color:GRAY,margin:"0 0 24px",fontSize:14}}>Upload .xlsx bank exports. Transactions are auto-categorized — review flagged items in the Transactions tab.</p>
     <div onDragOver={e=>{e.preventDefault();setDragOver(true)}} onDragLeave={()=>setDragOver(false)} onDrop={e=>{e.preventDefault();setDragOver(false);handle(Array.from(e.dataTransfer.files))}} onClick={()=>ref.current?.click()}
       style={{border:`2px dashed ${dragOver?GREEN:"#ccc"}`,borderRadius:12,padding:48,textAlign:"center",cursor:"pointer",background:dragOver?"rgba(26,86,50,0.04)":"#fafafa",transition:"all 0.2s ease"}}>
       <input ref={ref} type="file" accept=".xlsx,.xls" multiple onChange={e=>handle(Array.from(e.target.files))} style={{display:"none"}} />
       <div style={{fontSize:40,marginBottom:12}}>📂</div>
       <div style={{fontSize:16,fontWeight:600,color:"#333"}}>{importing?"Processing...":"Drop bank exports here or click to browse"}</div>
-      <div style={{fontSize:13,color:"#888",marginTop:6}}>Supports Rockland and Passumpsic .xlsx exports</div>
+      <div style={{fontSize:13,color:"#888",marginTop:6}}>Supports common bank export formats (.xlsx)</div>
     </div>
     {result && <div style={{marginTop:20,padding:20,borderRadius:10,background:result.errors.length?"#fff3f3":"#f0f9f4",border:`1px solid ${result.errors.length?"#f5c6cb":"#c3e6cb"}`}}>
       <div style={{fontWeight:700,fontSize:15,marginBottom:8}}>Import Complete</div>
@@ -254,7 +243,7 @@ function ImportTab({onImport,transactions,accounts,setAccounts,setLastUpdated}) 
 // ============================================================
 // TRANSACTIONS TAB (with filters)
 // ============================================================
-function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUpdated,setLastUpdated}) {
+function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,accounts,lastUpdated,setLastUpdated}) {
   const [filter,setFilter] = useState("all");
   const [monthF,setMonthF] = useState("");
   const [catF,setCatF] = useState("");
@@ -262,7 +251,8 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
   const [minAmt,setMinAmt] = useState("");
   const [maxAmt,setMaxAmt] = useState("");
   const [showAdd,setShowAdd] = useState(false);
-  const [newTx,setNewTx] = useState({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:"Rockland",isIncome:false});
+  const accountList = Object.keys(accounts);
+  const [newTx,setNewTx] = useState({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:accountList[0]||"",isIncome:false});
 
   const months = useMemo(()=>{const m=new Set(); transactions.forEach(t=>{if(t.date)m.add(dateToYM(t.date))}); return Array.from(m).sort().reverse();},[transactions]);
   const accts = useMemo(()=>[...new Set(transactions.map(t=>t.account).filter(Boolean))].sort(),[transactions]);
@@ -310,7 +300,7 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Description</label><input value={newTx.description} onChange={e=>setNewTx({...newTx,description:e.target.value})} placeholder="e.g. Walmart" style={{...inp,width:180}} /></div>
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Amount</label><input type="number" step="0.01" value={newTx.amount} onChange={e=>setNewTx({...newTx,amount:e.target.value})} style={{...inp,width:90}} /></div>
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Category</label><select value={newTx.category} onChange={e=>setNewTx({...newTx,category:e.target.value})} style={inp}><option value="">Select...</option>{categories.map(c=><option key={c} value={c}>{c}</option>)}</select></div>
-      <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Account</label><select value={newTx.account} onChange={e=>setNewTx({...newTx,account:e.target.value})} style={inp}><option>Rockland</option><option>Passumpsic</option></select></div>
+      <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Account</label><select value={newTx.account} onChange={e=>setNewTx({...newTx,account:e.target.value})} style={inp}>{accountList.map(a=><option key={a} value={a}>{a}</option>)}</select></div>
       <button onClick={addTx} style={{padding:"7px 16px",background:GREEN,color:"#fff",border:"none",borderRadius:6,fontWeight:600,fontSize:13,cursor:"pointer"}}>Add</button>
     </div>}
 
@@ -786,6 +776,247 @@ function CatMgr({categories,setCategories,categoryGroups,setCategoryGroups,proje
 }
 
 // ============================================================
+// ============================================================
+// SETTINGS TAB
+// ============================================================
+function SettingsTab({accounts,setAccounts,incomeProjections,setIncomeProjections,loans,setLoans,mortgage,setMortgage,projections,setProjections,categoryGroups,setLastUpdated}) {
+  const [section,setSection] = useState("accounts");
+  const [newAcct,setNewAcct] = useState("");
+  const [newIncSrc,setNewIncSrc] = useState("");
+  const [newLoan,setNewLoan] = useState({name:"",balance:"",rate:"",minPay:"",endDate:""});
+  const [editingLoan,setEditingLoan] = useState(null);
+  const [editMtg,setEditMtg] = useState(false);
+
+  function markUpdated() {
+    setLastUpdated(p=>({...p,settings:new Date().toISOString().split("T")[0]}));
+  }
+
+  function addAccount() {
+    const name = newAcct.trim();
+    if (!name || accounts[name]) return;
+    setAccounts(p=>({...p,[name]:{balance:0,lastUpdated:""}}));
+    setNewAcct(""); markUpdated();
+  }
+  function removeAccount(name) {
+    const u = {...accounts}; delete u[name]; setAccounts(u); markUpdated();
+  }
+  function updateAccountBalance(name, val) {
+    setAccounts(p=>({...p,[name]:{...p[name],balance:parseFloat(val)||0,lastUpdated:new Date().toISOString().split("T")[0]}}));
+    markUpdated();
+  }
+
+  function addIncSource() {
+    const name = newIncSrc.trim();
+    if (!name || incomeProjections[name] !== undefined) return;
+    setIncomeProjections(p=>({...p,[name]:0})); setNewIncSrc(""); markUpdated();
+  }
+  function removeIncSource(name) {
+    const u = {...incomeProjections}; delete u[name]; setIncomeProjections(u); markUpdated();
+  }
+  function updateIncSource(name, val) {
+    setIncomeProjections(p=>({...p,[name]:parseFloat(val)||0})); markUpdated();
+  }
+  function renameIncSource(oldName, newName) {
+    if (!newName.trim() || oldName === newName.trim()) return;
+    const entries = Object.entries(incomeProjections);
+    const updated = {};
+    for (const [k,v] of entries) updated[k===oldName ? newName.trim() : k] = v;
+    setIncomeProjections(updated); markUpdated();
+  }
+
+  function addLoan() {
+    if (!newLoan.name.trim() || !newLoan.balance) return;
+    const loan = {id:crypto.randomUUID(),name:newLoan.name.trim(),balance:parseFloat(newLoan.balance)||0,rate:parseFloat(newLoan.rate)||0,minPay:parseFloat(newLoan.minPay)||0,endDate:newLoan.endDate};
+    setLoans(p=>[...p, loan]); setNewLoan({name:"",balance:"",rate:"",minPay:"",endDate:""}); markUpdated();
+  }
+  function removeLoan(id) { setLoans(p=>p.filter(l=>l.id!==id)); markUpdated(); }
+  function updateLoan(id, field, val) {
+    setLoans(p=>p.map(l=>l.id===id ? {...l,[field]:field==="name"||field==="endDate" ? val : parseFloat(val)||0} : l));
+    markUpdated();
+  }
+
+  const sections = [
+    {id:"accounts", label:"🏦 Accounts"},
+    {id:"income", label:"💰 Income Sources"},
+    {id:"loans", label:"💳 Loans & Mortgage"},
+    {id:"projections", label:"📊 Budget Projections"},
+  ];
+
+  const sBtn = (id) => ({padding:"10px 16px",border:"none",borderRadius:8,cursor:"pointer",fontFamily:FB,fontSize:13,fontWeight:section===id?700:500,background:section===id?GREEN:"transparent",color:section===id?"#fff":GRAY,textAlign:"left",width:"100%",transition:"all 0.15s ease"});
+
+  const totalIncome = Object.values(incomeProjections).reduce((s,v)=>s+(parseFloat(v)||0),0);
+  const totalExpenses = Object.values(projections).reduce((s,v)=>s+(parseFloat(v)||0),0);
+  const totalDebt = loans.reduce((s,l)=>s+l.balance,0);
+  const cashOnHand = Object.values(accounts).reduce((s,a)=>s+(a.balance||0),0);
+
+  return <div style={{display:"grid",gridTemplateColumns:"180px 1fr",minHeight:600}}>
+    <div style={{borderRight:"1px solid #eee",padding:"24px 12px",display:"flex",flexDirection:"column",gap:4}}>
+      <div style={{fontSize:11,color:"#aaa",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:8,paddingLeft:4}}>Settings</div>
+      {sections.map(s=>(<button key={s.id} onClick={()=>setSection(s.id)} style={sBtn(s.id)}>{s.label}</button>))}
+      <div style={{marginTop:"auto",padding:"12px 4px",borderTop:"1px solid #eee"}}>
+        <div style={{fontSize:11,color:"#aaa",textTransform:"uppercase",letterSpacing:"0.06em",marginBottom:8}}>Summary</div>
+        <div style={{fontSize:12,color:"#555",lineHeight:2}}>
+          <div>Cash: <strong style={{color:GREEN}}>{fmt(cashOnHand)}</strong></div>
+          <div>Monthly in: <strong style={{color:GREEN}}>{fmt(totalIncome)}</strong></div>
+          <div>Monthly out: <strong style={{color:totalExpenses>totalIncome?RED:GRAY}}>{fmt(totalExpenses)}</strong></div>
+          <div>Total debt: <strong style={{color:RED}}>{fmt(totalDebt)}</strong></div>
+        </div>
+      </div>
+    </div>
+    <div style={{padding:28,overflowY:"auto"}}>
+
+      {section==="accounts" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Bank Accounts</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 24px"}}>Add the accounts you want to track. Balances update automatically when you import bank exports.</p>
+        {Object.keys(accounts).length===0 && <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:20,fontSize:13,color:"#888",textAlign:"center"}}>No accounts yet. Add your first one below.</div>}
+        <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:24}}>
+          {Object.entries(accounts).map(([name,info])=>(
+            <div key={name} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",background:"#f8f9fa",borderRadius:10}}>
+              <div style={{flex:1,fontSize:14,fontWeight:600,color:"#333"}}>{name}</div>
+              <div style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{fontSize:13,color:"#888"}}>$</span>
+                <input type="number" step="0.01" value={info.balance||""} onChange={e=>updateAccountBalance(name,e.target.value)} style={{width:110,padding:"5px 8px",border:"1px solid #ddd",borderRadius:6,fontSize:13,fontWeight:600}} />
+              </div>
+              {info.lastUpdated && <span style={{fontSize:11,color:"#aaa"}}>Updated {info.lastUpdated}</span>}
+              <button onClick={()=>removeAccount(name)} style={{border:"none",background:"none",color:"#ccc",cursor:"pointer",fontSize:18,lineHeight:1}}>×</button>
+            </div>
+          ))}
+        </div>
+        <div style={{display:"flex",gap:10,alignItems:"center"}}>
+          <input value={newAcct} onChange={e=>setNewAcct(e.target.value)} onKeyDown={e=>e.key==="Enter"&&addAccount()} placeholder="Account name (e.g. Chase Checking)" style={{...inp,width:240}} />
+          <button onClick={addAccount} style={{padding:"8px 18px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add Account</button>
+        </div>
+      </div>}
+
+      {section==="income" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Income Sources</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 24px"}}>Your projected monthly income amounts used in budget calculations.</p>
+        {Object.keys(incomeProjections).length===0 && <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:20,fontSize:13,color:"#888",textAlign:"center"}}>No income sources yet. Add your first one below.</div>}
+        <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:24}}>
+          {Object.entries(incomeProjections).map(([name,val])=>(
+            <div key={name} style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",background:"#f8f9fa",borderRadius:10}}>
+              <input defaultValue={name} onBlur={e=>renameIncSource(name,e.target.value)} style={{flex:1,border:"none",background:"transparent",fontSize:14,fontWeight:600,color:"#333",outline:"none",cursor:"text"}} title="Click to rename" />
+              <div style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{fontSize:13,color:"#888"}}>$/mo</span>
+                <input type="number" step="0.01" value={val||""} onChange={e=>updateIncSource(name,e.target.value)} style={{width:110,padding:"5px 8px",border:"1px solid #ddd",borderRadius:6,fontSize:13,fontWeight:600}} />
+              </div>
+              <button onClick={()=>removeIncSource(name)} style={{border:"none",background:"none",color:"#ccc",cursor:"pointer",fontSize:18,lineHeight:1}}>×</button>
+            </div>
+          ))}
+        </div>
+        <div style={{padding:"10px 16px",background:"rgba(26,86,50,0.06)",borderRadius:8,marginBottom:20,fontSize:13}}>
+          Total projected monthly income: <strong style={{color:GREEN}}>{fmt(totalIncome)}</strong>
+        </div>
+        <div style={{display:"flex",gap:10,alignItems:"center"}}>
+          <input value={newIncSrc} onChange={e=>setNewIncSrc(e.target.value)} onKeyDown={e=>e.key==="Enter"&&addIncSource()} placeholder="Source name (e.g. Adam Salary)" style={{...inp,width:240}} />
+          <button onClick={addIncSource} style={{padding:"8px 18px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add Source</button>
+        </div>
+      </div>}
+
+      {section==="loans" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Loans & Mortgage</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 24px"}}>All debts tracked in the Debt Strategy tab. Add each loan for accurate payoff projections.</p>
+        {loans.length===0 ? <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:20,fontSize:13,color:"#888",textAlign:"center"}}>No loans added yet.</div>
+        : <div style={{border:"1px solid #eee",borderRadius:10,overflow:"hidden",marginBottom:24}}>
+            <table style={{width:"100%",borderCollapse:"collapse",fontSize:13}}>
+              <thead><tr style={{background:"#f8f9fa"}}>
+                {["Name","Balance","Rate %","Min Pay","End Date",""].map(h=>(<th key={h} style={{padding:"10px 12px",textAlign:h==="Name"?"left":"right",fontWeight:600,color:"#555",borderBottom:"2px solid #eee",fontSize:11,textTransform:"uppercase"}}>{h}</th>))}
+              </tr></thead>
+              <tbody>
+                {loans.map(loan=>{
+                  const isE = editingLoan===loan.id;
+                  return <tr key={loan.id} style={{borderBottom:"1px solid #f0f0f0"}}>
+                    <td style={{padding:"10px 12px"}}>{isE?<input value={loan.name} onChange={e=>updateLoan(loan.id,"name",e.target.value)} style={{...inp,width:130}} />:<span style={{fontWeight:500,color:"#333"}}>{loan.name}</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="number" step="0.01" value={loan.balance} onChange={e=>updateLoan(loan.id,"balance",e.target.value)} style={{...inp,width:90,textAlign:"right"}} />:<span style={{color:RED,fontWeight:600}}>{fmt(loan.balance)}</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="number" step="0.01" value={loan.rate} onChange={e=>updateLoan(loan.id,"rate",e.target.value)} style={{...inp,width:60,textAlign:"right"}} />:<span style={{color:GRAY}}>{loan.rate}%</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="number" step="0.01" value={loan.minPay} onChange={e=>updateLoan(loan.id,"minPay",e.target.value)} style={{...inp,width:80,textAlign:"right"}} />:<span>{fmt(loan.minPay)}</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="month" value={loan.endDate} onChange={e=>updateLoan(loan.id,"endDate",e.target.value)} style={inp} />:<span style={{color:GRAY,fontSize:12}}>{loan.endDate||"—"}</span>}</td>
+                    <td style={{padding:"10px 8px",textAlign:"right",whiteSpace:"nowrap"}}>
+                      <button onClick={()=>setEditingLoan(isE?null:loan.id)} style={{border:"none",background:"none",color:isE?GREEN:"#aaa",cursor:"pointer",fontSize:12,fontWeight:600,marginRight:6}}>{isE?"done":"edit"}</button>
+                      <button onClick={()=>removeLoan(loan.id)} style={{border:"none",background:"none",color:"#ccc",cursor:"pointer",fontSize:16}}>×</button>
+                    </td>
+                  </tr>;
+                })}
+              </tbody>
+              <tfoot><tr style={{background:"#f8f9fa",fontWeight:700}}>
+                <td style={{padding:"10px 12px"}}>TOTAL</td>
+                <td style={{padding:"10px 12px",textAlign:"right",color:RED}}>{fmt(loans.reduce((s,l)=>s+l.balance,0))}</td>
+                <td colSpan={4}></td>
+              </tr></tfoot>
+            </table>
+          </div>}
+        <div style={{background:"#f8f9fa",borderRadius:10,padding:16,marginBottom:32}}>
+          <div style={{fontSize:13,fontWeight:600,color:"#444",marginBottom:12}}>Add a Loan</div>
+          <div style={{display:"flex",gap:10,flexWrap:"wrap",alignItems:"flex-end"}}>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Name</label><input value={newLoan.name} onChange={e=>setNewLoan({...newLoan,name:e.target.value})} placeholder="e.g. Student Loan A" style={{...inp,width:160}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Balance</label><input type="number" step="0.01" value={newLoan.balance} onChange={e=>setNewLoan({...newLoan,balance:e.target.value})} placeholder="0.00" style={{...inp,width:90}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Rate %</label><input type="number" step="0.01" value={newLoan.rate} onChange={e=>setNewLoan({...newLoan,rate:e.target.value})} placeholder="0.00" style={{...inp,width:70}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Min Pay</label><input type="number" step="0.01" value={newLoan.minPay} onChange={e=>setNewLoan({...newLoan,minPay:e.target.value})} placeholder="0.00" style={{...inp,width:80}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>End Date</label><input type="month" value={newLoan.endDate} onChange={e=>setNewLoan({...newLoan,endDate:e.target.value})} style={inp} /></div>
+            <button onClick={addLoan} style={{padding:"8px 18px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer",alignSelf:"flex-end"}}>Add Loan</button>
+          </div>
+        </div>
+        <div style={{borderTop:"2px solid #eee",paddingTop:24}}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:16}}>
+            <div>
+              <div style={{fontSize:16,fontWeight:700,color:"#1a1a1a",fontFamily:FH}}>Mortgage</div>
+              <div style={{fontSize:12,color:GRAY,marginTop:2}}>Tracked separately — paid off last.</div>
+            </div>
+            <button onClick={()=>setEditMtg(!editMtg)} style={{border:`1px solid ${editMtg?GREEN:"#ddd"}`,background:editMtg?"rgba(26,86,50,0.08)":"#fff",color:editMtg?GREEN:GRAY,borderRadius:6,padding:"6px 14px",fontSize:12,fontWeight:600,cursor:"pointer"}}>{editMtg?"Save":"Edit"}</button>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:12}}>
+            {[{label:"Balance",field:"balance"},{label:"Interest Rate %",field:"rate"},{label:"Monthly Payment",field:"minPay"}].map(({label,field})=>(
+              <div key={field} style={{background:"#f8f9fa",borderRadius:10,padding:"12px 16px"}}>
+                <div style={{fontSize:11,color:"#888",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>{label}</div>
+                {editMtg?<input type="number" step="0.01" value={mortgage[field]||""} onChange={e=>setMortgage(p=>({...p,[field]:parseFloat(e.target.value)||0}))} style={{...inp,width:"100%",fontSize:15,fontWeight:700}} />
+                :<div style={{fontSize:18,fontWeight:700,color:field==="balance"?RED:"#333"}}>{field==="rate"?`${mortgage[field]||0}%`:`${fmt(mortgage[field]||0)}`}</div>}
+              </div>
+            ))}
+            <div style={{background:"#f8f9fa",borderRadius:10,padding:"12px 16px"}}>
+              <div style={{fontSize:11,color:"#888",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>Payoff Date</div>
+              {editMtg?<input type="month" value={mortgage.endDate||""} onChange={e=>setMortgage(p=>({...p,endDate:e.target.value}))} style={{...inp,width:"100%"}} />
+              :<div style={{fontSize:18,fontWeight:700,color:GRAY}}>{mortgage.endDate?mLabel(mortgage.endDate):"—"}</div>}
+            </div>
+          </div>
+        </div>
+      </div>}
+
+      {section==="projections" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Budget Projections</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 8px"}}>Set your expected monthly spend per category. These are your targets in the Budget tab.</p>
+        <p style={{color:GRAY,fontSize:12,margin:"0 0 24px",fontStyle:"italic"}}>To add or remove categories, use the Categories tab.</p>
+        {Object.keys(categoryGroups).length===0
+          ? <div style={{padding:20,background:"#f8f9fa",borderRadius:10,fontSize:13,color:"#888",textAlign:"center"}}>No categories yet. Add some in the Categories tab first.</div>
+          : Object.entries(categoryGroups).map(([group,cats])=>{
+              const groupTotal = cats.reduce((s,c)=>s+(parseFloat(projections[c])||0),0);
+              return <div key={group} style={{marginBottom:24}}>
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
+                  <Sec>{group}</Sec>
+                  <span style={{fontSize:12,color:GRAY}}>Total: <strong>{fmt(groupTotal)}</strong>/mo</span>
+                </div>
+                <div style={{background:"#f8f9fa",borderRadius:10,overflow:"hidden"}}>
+                  {cats.map((cat,i)=>(
+                    <div key={cat} style={{display:"flex",alignItems:"center",gap:12,padding:"10px 16px",borderBottom:i<cats.length-1?"1px solid #eee":"none"}}>
+                      <span style={{flex:1,fontSize:13,color:"#444"}}>{cat}</span>
+                      <div style={{display:"flex",alignItems:"center",gap:6}}>
+                        <span style={{fontSize:12,color:"#aaa"}}>$/mo</span>
+                        <input type="number" step="0.01" value={projections[cat]??""} onChange={e=>setProjections(p=>({...p,[cat]:e.target.value}))} placeholder="0.00" style={{width:90,padding:"5px 8px",border:"1px solid #ddd",borderRadius:6,fontSize:13,textAlign:"right"}} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>;
+            })}
+        <div style={{padding:"12px 16px",background:"rgba(26,86,50,0.06)",borderRadius:8,marginTop:8,fontSize:13}}>
+          Total projected expenses: <strong style={{color:totalExpenses>totalIncome&&totalIncome>0?RED:GREEN}}>{fmt(totalExpenses)}</strong>
+          {totalIncome>0 && <span style={{color:GRAY,marginLeft:8}}>vs. {fmt(totalIncome)} income → <strong style={{color:(totalIncome-totalExpenses)>=0?GREEN:RED}}>{fmt(totalIncome-totalExpenses)}</strong></span>}
+        </div>
+      </div>}
+
+    </div>
+  </div>;
+}
+
 // MAIN APP
 // ============================================================
 export default function App() {
@@ -874,6 +1105,7 @@ export default function App() {
       <Tab active={tab==="budget"} onClick={()=>setTab("budget")}>Budget</Tab>
       <Tab active={tab==="debt"} onClick={()=>setTab("debt")}>Debt Strategy</Tab>
       <Tab active={tab==="categories"} onClick={()=>setTab("categories")}>Categories</Tab>
+      <Tab active={tab==="settings"} onClick={()=>setTab("settings")}>⚙ Settings</Tab>
     </div>
 
     {tab==="import" && <ImportTab onImport={tx=>setTransactions(p=>[...p,...tx])} transactions={transactions} accounts={accounts} setAccounts={setAccounts} setLastUpdated={setLastUpdated} />}
@@ -881,5 +1113,6 @@ export default function App() {
     {tab==="budget" && <BudgetTab transactions={transactions} projections={projections} setProjections={setProjections} incomeProjections={incomeProjections} setIncomeProjections={setIncomeProjections} categoryGroups={categoryGroups} accounts={accounts} monthlyHistory={monthlyHistory} lastUpdated={lastUpdated} />}
     {tab==="debt" && <DebtTab transactions={transactions} loans={loans} setLoans={setLoans} mortgage={mortgage} setMortgage={setMortgage} lastUpdated={lastUpdated} setLastUpdated={setLastUpdated} />}
     {tab==="categories" && <CatMgr categories={categories} setCategories={setCategories} categoryGroups={categoryGroups} setCategoryGroups={setCategoryGroups} projections={projections} setProjections={setProjections} />}
+    {tab==="settings" && <SettingsTab accounts={accounts} setAccounts={setAccounts} incomeProjections={incomeProjections} setIncomeProjections={setIncomeProjections} loans={loans} setLoans={setLoans} mortgage={mortgage} setMortgage={setMortgage} projections={projections} setProjections={setProjections} categoryGroups={categoryGroups} setLastUpdated={setLastUpdated} />}
   </div>;
 }
