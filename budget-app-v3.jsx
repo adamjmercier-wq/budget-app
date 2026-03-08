@@ -251,7 +251,7 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,accoun
   const [minAmt,setMinAmt] = useState("");
   const [maxAmt,setMaxAmt] = useState("");
   const [showAdd,setShowAdd] = useState(false);
-  const accountList = Object.keys(accounts);
+  const accountList = Object.keys(accounts || {});
   const [newTx,setNewTx] = useState({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:accountList[0]||"",isIncome:false});
 
   const months = useMemo(()=>{const m=new Set(); transactions.forEach(t=>{if(t.date)m.add(dateToYM(t.date))}); return Array.from(m).sort().reverse();},[transactions]);
