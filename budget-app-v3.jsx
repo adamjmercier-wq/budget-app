@@ -16,46 +16,35 @@ const SK = {
 // ============================================================
 // SEED DATA
 // ============================================================
-const SEED_HISTORY = {"2025-02":{"Car Payment":1000,"Coffee":251.4,"Dance":45.32,"Disney":15.99,"Gasoline":573.32,"Google One":2.13,"Groceries":1678.62,"Heat":229.95,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":277.5,"Mortgage":3032.22,"Peacock":7.99,"Personal":994.9},"2025-03":{"Car Payment":1608.91,"Coffee":445.31,"Dance":45.32,"Disney":15.99,"Gasoline":541.38,"Google One":2.13,"Groceries":2081.8,"Heat":268.41,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":223.33,"Mortgage":3032.22,"Moving":3871.84,"PBS":7,"Peacock":7.99,"Personal":671.1,"Prime":134.86},"2025-04":{"Car Payment":1000,"Coffee":429.04,"Disney":15.99,"Gasoline":478.71,"Google One":2.13,"Groceries":2024.19,"Heat":217.87,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":103.52,"Mortgage":3032.22,"Moving":2171.99,"Peacock":7.99,"Personal":2346.25,"Water/Sewer":258.46},"2025-05":{"Audible":14.95,"Car Payment":1000,"Coffee":345.96,"Disney":15.99,"Gasoline":260.53,"Google One":2.13,"Groceries":2593.25,"Heat":163.06,"Internet":60,"Life Insurance":23.15,"Meds/Doctor":119.34,"Mortgage":3032.22,"Moving":1934.63,"Peacock":7.99,"Personal":1140.84},"2025-06":{"Audible":14.95,"Car Insurance":1806.3,"Coffee":193.66,"Disney":15.99,"Gasoline":330.92,"Google One":2.13,"Groceries":3575.29,"Gym":120,"Heat":112.4,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":327.34,"Moving":1685.13,"Peacock":7.99,"Personal":1888.28,"Tex":75},"2025-07":{"Audible":14.95,"Car Insurance":328.35,"Coffee":113.82,"Disney":15.99,"Electric":23.79,"Gasoline":664.16,"Google One":5.33,"Groceries":3295.75,"Gym":80,"Heat":37.43,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":110.31,"Mortgage":2120.02,"Peacock":7.99,"Personal":2095.83,"Tex":75},"2025-08":{"Audible":14.95,"Car Payment":300,"Coffee":262.01,"Disney":15.99,"Electric":194.94,"Gasoline":282.57,"Google One":4,"Groceries":2672.93,"Gym":80,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":972.47,"Mortgage":2120.02,"PBS":7,"Peacock":10.99,"Personal":2880.97,"Tex":75},"2025-09":{"Audible":14.95,"Car Payment":300,"Coffee":158.21,"Dance":51.5,"Disney":15.99,"Electric":232.28,"Gasoline":432.93,"Gifts/Events":362.64,"Google One":19.63,"Groceries":2310.96,"Gym":80,"Heat":650,"Internet":76.01,"Life Insurance":23.15,"Meds/Doctor":98.86,"Mortgage":2120.02,"PBS":4.99,"Peacock":10.99,"Personal":1612.11,"Tex":75},"2025-10":{"Audible":14.95,"Car Payment":300,"Coffee":230.47,"Dance":51.5,"Disney":38.99,"Electric":212.99,"Gasoline":419.89,"Gifts/Events":1188,"Google One":21.39,"Groceries":2918.13,"Gym":80,"Heat":667.67,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":434.88,"Mortgage":2120.02,"Netflix":7.99,"Peacock":10.99,"Personal":1197.65,"Student Loan":308.84,"Tex":75},"2025-11":{"Car Payment":300,"Coffee":102.96,"Dance":226.5,"Disney":38.99,"Electric":183.61,"Gasoline":245.97,"Gifts/Events":195,"Google One":33.49,"Groceries":1899.82,"Gym":80,"Heat":377.18,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":185.65,"Mortgage":2120.02,"Netflix":7.99,"Personal":1850.74,"Pets":98.26,"Student Loan":407.22,"Tex":75,"Water/Sewer":456},"2025-12":{"Car Insurance":1641.9,"Dance":51.5,"Electric":215.09,"Gym":80,"Heat":309.98,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":1621.97,"Mortgage":2120.02,"Personal":1910.13,"Student Loan":98.38,"Tex":75,"Xbox":15.93},"2026-01":{"Car Payment":300,"Coffee":173.18,"Dance":21.88,"Disney":38.99,"Electric":294.52,"Gasoline":449.54,"Gifts/Events":526.41,"Google One":20.24,"Groceries":2372.22,"Heat":593.96,"Internet":80,"Life Insurance":23.15,"Meds/Doctor":2159.41,"Mortgage":2120.02,"Netflix":7.99,"PBS":4.99,"Peacock":10.99,"Personal":1489.49,"Pets":154.32,"SimpliSafe":32.99,"Student Loan":407.22,"Xbox":15.93}};
+const SEED_HISTORY = {};
 
 const DEFAULT_CATEGORIES = [
-  "Mortgage","Life Insurance","Electric","Heat","Internet","Dance","Water/Sewer","SimpliSafe",
+  "Mortgage","Rent","Electric","Heat","Internet","Water/Sewer",
   "Car Payment","Student Loan","Gasoline","Car Insurance",
-  "Groceries","Coffee","Pets","Meds/Doctor","Gym","Tex",
-  "Personal","Disney","Peacock","PBS","Netflix","Audible","Google One","Xbox","Prime",
-  "Gifts/Events","Moving","Consulting Expense","Income","Ignore"
+  "Groceries","Dining Out","Pets","Meds/Doctor","Gym",
+  "Personal","Gifts/Events",
+  "Netflix","Spotify","Amazon Prime",
+  "Income","Ignore"
 ];
 
 const DEFAULT_GROUPS = {
-  "Bills":["Mortgage","Life Insurance","Electric","Heat","Internet","Dance","Water/Sewer","SimpliSafe"],
-  "Debt/Projects":["Car Payment","Student Loan"],
+  "Bills":["Mortgage","Rent","Electric","Heat","Internet","Water/Sewer"],
+  "Debt":["Car Payment","Student Loan"],
   "Transportation":["Gasoline","Car Insurance"],
-  "Food":["Groceries","Coffee","Pets"],
-  "Health":["Meds/Doctor","Gym","Tex"],
-  "Personal":["Personal","Gifts/Events","Moving"],
-  "Subscriptions":["Disney","Peacock","PBS","Netflix","Audible","Google One","Xbox","Prime"],
-  "Business":["Consulting Expense"],
+  "Food":["Groceries","Dining Out","Pets"],
+  "Health":["Meds/Doctor","Gym"],
+  "Personal":["Personal","Gifts/Events"],
+  "Subscriptions":["Netflix","Spotify","Amazon Prime"],
 };
 
-const DEFAULT_PROJ = {"Mortgage":2293.28,"Life Insurance":23.15,"Electric":250,"Heat":200,"Internet":80,"Dance":51.5,"Water/Sewer":0,"SimpliSafe":33,"Car Payment":300,"Student Loan":407.22,"Gasoline":400,"Car Insurance":0,"Groceries":1500,"Coffee":150,"Pets":150,"Meds/Doctor":50,"Gym":0,"Tex":0,"Personal":200,"Gifts/Events":0,"Moving":0,"Disney":38.99,"Peacock":11,"PBS":7,"Netflix":0,"Audible":15,"Google One":4,"Xbox":0,"Prime":0,"Consulting Expense":0};
+const DEFAULT_PROJ = {};
 
-const DEFAULT_INC = {"Theresa 1":2191.35,"Theresa 2":2191.35,"Adam (Consulting/Driving)":2000,"Other":0};
+const DEFAULT_INC = {};
 
-const DEFAULT_LOANS = [
-  {id:"l1",name:"T Loan #2",balance:2467.6,rate:6.55,minPay:15.67,endDate:"2036-08"},
-  {id:"l2",name:"T Loan #1",balance:5581.98,rate:6.55,minPay:34.32,endDate:"2036-08"},
-  {id:"l3",name:"T Loan #5",balance:10729.04,rate:4.05,minPay:69.28,endDate:"2036-04"},
-  {id:"l4",name:"A Loan 4",balance:10832.7,rate:8.08,minPay:19.48,endDate:"2037-03"},
-  {id:"l5",name:"A Loan 3",balance:11154.91,rate:8.08,minPay:19.75,endDate:"2037-08"},
-  {id:"l6",name:"A Loan 2",balance:11326.43,rate:7.05,minPay:19.72,endDate:"2037-05"},
-  {id:"l7",name:"T Loan #3",balance:14005.01,rate:6.35,minPay:83.26,endDate:"2036-08"},
-  {id:"l8",name:"T Loan #4",balance:16600.38,rate:5.83,minPay:105.94,endDate:"2036-07"},
-  {id:"l9",name:"2020 Ascent (Car)",balance:16665.98,rate:5.56,minPay:297.39,endDate:"2031-07"},
-  {id:"l10",name:"A Loan 1",balance:23153.26,rate:7.05,minPay:39.43,endDate:"2037-05"},
-];
+const DEFAULT_LOANS = [];
 
-const DEFAULT_MORTGAGE = {balance:249656.8,rate:6.5,minPay:2293.28,endDate:"2055-06"};
-const DEFAULT_ACCTS = {"Rockland":{balance:0,lastUpdated:""},"Passumpsic":{balance:0,lastUpdated:""}};
+const DEFAULT_MORTGAGE = {balance:0,rate:0,minPay:0,endDate:""};
+const DEFAULT_ACCTS = {};
 
 // ============================================================
 // AUTO-CATEGORIZATION
@@ -213,15 +202,15 @@ function ImportTab({onImport,transactions,accounts,setAccounts,setLastUpdated}) 
     setImporting(false);
   }
 
-  return <div style={{padding:24}}>
+  return <div className="ncb-tab-content" style={{padding:24}}>
     <h2 style={{margin:"0 0 8px",fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Import Bank Exports</h2>
-    <p style={{color:GRAY,margin:"0 0 24px",fontSize:14}}>Upload .xlsx exports from Rockland or Passumpsic. Auto-categorized — review flagged items in Transactions.</p>
-    <div onDragOver={e=>{e.preventDefault();setDragOver(true)}} onDragLeave={()=>setDragOver(false)} onDrop={e=>{e.preventDefault();setDragOver(false);handle(Array.from(e.dataTransfer.files))}} onClick={()=>ref.current?.click()}
+    <p style={{color:GRAY,margin:"0 0 24px",fontSize:14}}>Upload .xlsx bank exports. Transactions are auto-categorized — review flagged items in the Transactions tab.</p>
+    <div className="ncb-drop-zone" onDragOver={e=>{e.preventDefault();setDragOver(true)}} onDragLeave={()=>setDragOver(false)} onDrop={e=>{e.preventDefault();setDragOver(false);handle(Array.from(e.dataTransfer.files))}} onClick={()=>ref.current?.click()}
       style={{border:`2px dashed ${dragOver?GREEN:"#ccc"}`,borderRadius:12,padding:48,textAlign:"center",cursor:"pointer",background:dragOver?"rgba(26,86,50,0.04)":"#fafafa",transition:"all 0.2s ease"}}>
       <input ref={ref} type="file" accept=".xlsx,.xls" multiple onChange={e=>handle(Array.from(e.target.files))} style={{display:"none"}} />
       <div style={{fontSize:40,marginBottom:12}}>📂</div>
       <div style={{fontSize:16,fontWeight:600,color:"#333"}}>{importing?"Processing...":"Drop bank exports here or click to browse"}</div>
-      <div style={{fontSize:13,color:"#888",marginTop:6}}>Supports Rockland and Passumpsic .xlsx exports</div>
+      <div style={{fontSize:13,color:"#888",marginTop:6}}>Supports common bank export formats (.xlsx)</div>
     </div>
     {result && <div style={{marginTop:20,padding:20,borderRadius:10,background:result.errors.length?"#fff3f3":"#f0f9f4",border:`1px solid ${result.errors.length?"#f5c6cb":"#c3e6cb"}`}}>
       <div style={{fontWeight:700,fontSize:15,marginBottom:8}}>Import Complete</div>
@@ -236,6 +225,7 @@ function ImportTab({onImport,transactions,accounts,setAccounts,setLastUpdated}) 
     <div style={{marginTop:32}}>
       <Sec>Account Balances</Sec>
       <p style={{fontSize:13,color:"#888",margin:"0 0 12px"}}>Auto-populated from imports. Adjust manually anytime.</p>
+      {Object.keys(accounts).length===0 && <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:12,fontSize:13,color:"#888",textAlign:"center"}}>No accounts yet — add them in Settings, or they'll be created automatically when you import.</div>}
       <div style={{display:"grid",gap:12,gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))"}}>
         {Object.entries(accounts).map(([n,info])=><div key={n} style={{background:"#f8f9fa",borderRadius:10,padding:16}}>
           <div style={{fontSize:13,fontWeight:600,color:"#444",marginBottom:8}}>{n}</div>
@@ -254,7 +244,7 @@ function ImportTab({onImport,transactions,accounts,setAccounts,setLastUpdated}) 
 // ============================================================
 // TRANSACTIONS TAB (with filters)
 // ============================================================
-function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUpdated,setLastUpdated}) {
+function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,accounts,lastUpdated,setLastUpdated}) {
   const [filter,setFilter] = useState("all");
   const [monthF,setMonthF] = useState("");
   const [catF,setCatF] = useState("");
@@ -262,7 +252,8 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
   const [minAmt,setMinAmt] = useState("");
   const [maxAmt,setMaxAmt] = useState("");
   const [showAdd,setShowAdd] = useState(false);
-  const [newTx,setNewTx] = useState({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:"Rockland",isIncome:false});
+  const accountList = Object.keys(accounts || {});
+  const [newTx,setNewTx] = useState({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:accountList[0]||"",isIncome:false});
 
   const months = useMemo(()=>{const m=new Set(); transactions.forEach(t=>{if(t.date)m.add(dateToYM(t.date))}); return Array.from(m).sort().reverse();},[transactions]);
   const accts = useMemo(()=>[...new Set(transactions.map(t=>t.account).filter(Boolean))].sort(),[transactions]);
@@ -287,7 +278,7 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
     const today = new Date().toISOString().split("T")[0];
     onAdd({id:crypto.randomUUID(),...newTx,amount:parseFloat(newTx.amount),autoMatched:true,isIncome:newTx.category==="Income"});
     setLastUpdated(p=>({...p,transactions:today}));
-    setNewTx({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account:"Rockland",isIncome:false});
+    setNewTx({date:new Date().toISOString().split("T")[0],description:"",amount:"",category:"",account: accountList[0] || "",isIncome:false});
     setShowAdd(false);
   }
 
@@ -296,8 +287,8 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
     setLastUpdated(p=>({...p,transactions:new Date().toISOString().split("T")[0]}));
   }
 
-  return <div style={{padding:24}}>
-    <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:16}}>
+  return <div className="ncb-tab-content" style={{padding:24}}>
+    <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:16,flexWrap:"wrap",gap:8}}>
       <div>
         <h2 style={{margin:0,fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Transactions</h2>
         <LastUpdated dates={{tx:lastUpdated.transactions}} />
@@ -305,22 +296,22 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
       <button onClick={()=>setShowAdd(!showAdd)} style={{padding:"8px 16px",border:"none",borderRadius:8,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>+ Manual Entry</button>
     </div>
 
-    {showAdd && <div style={{background:"#f8f9fa",borderRadius:10,padding:16,marginBottom:16,display:"flex",gap:10,flexWrap:"wrap",alignItems:"flex-end"}}>
+    {showAdd && <div className="ncb-add-form" style={{background:"#f8f9fa",borderRadius:10,padding:16,marginBottom:16,display:"flex",gap:10,flexWrap:"wrap",alignItems:"flex-end"}}>
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Date</label><input type="date" value={newTx.date} onChange={e=>setNewTx({...newTx,date:e.target.value})} style={inp} /></div>
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Description</label><input value={newTx.description} onChange={e=>setNewTx({...newTx,description:e.target.value})} placeholder="e.g. Walmart" style={{...inp,width:180}} /></div>
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Amount</label><input type="number" step="0.01" value={newTx.amount} onChange={e=>setNewTx({...newTx,amount:e.target.value})} style={{...inp,width:90}} /></div>
       <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Category</label><select value={newTx.category} onChange={e=>setNewTx({...newTx,category:e.target.value})} style={inp}><option value="">Select...</option>{categories.map(c=><option key={c} value={c}>{c}</option>)}</select></div>
-      <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Account</label><select value={newTx.account} onChange={e=>setNewTx({...newTx,account:e.target.value})} style={inp}><option>Rockland</option><option>Passumpsic</option></select></div>
+      <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Account</label><select value={newTx.account} onChange={e=>setNewTx({...newTx,account:e.target.value})} style={inp}>{accountList.map(a=><option key={a} value={a}>{a}</option>)}</select></div>
       <button onClick={addTx} style={{padding:"7px 16px",background:GREEN,color:"#fff",border:"none",borderRadius:6,fontWeight:600,fontSize:13,cursor:"pointer"}}>Add</button>
     </div>}
 
     {/* Filter bar */}
-    <div style={{display:"flex",gap:8,marginBottom:12,flexWrap:"wrap",alignItems:"center"}}>
+    <div className="ncb-filter-bar" style={{display:"flex",gap:8,marginBottom:12,flexWrap:"wrap",alignItems:"center"}}>
       {[["all","All"],["unmatched","Needs Review" + (unmatched ? " (" + unmatched + ")" : "")],["income","Income"]].map(([v,l])=>
         <button key={v} onClick={()=>setFilter(v)} style={{padding:"5px 14px",borderRadius:20,fontSize:12,fontWeight:600,border:filter===v?`2px solid ${GREEN}`:"1px solid #ddd",background:filter===v?"rgba(26,86,50,0.08)":"#fff",color:filter===v?GREEN:GRAY,cursor:"pointer"}}>{l}</button>
       )}
     </div>
-    <div style={{display:"flex",gap:8,marginBottom:16,flexWrap:"wrap",alignItems:"center",fontSize:12}}>
+    <div className="ncb-filter-row" style={{display:"flex",gap:8,marginBottom:16,flexWrap:"wrap",alignItems:"center",fontSize:12}}>
       <select value={monthF} onChange={e=>setMonthF(e.target.value)} style={{...inp,fontSize:12}}><option value="">All months</option>{months.map(m=><option key={m} value={m}>{mLabel(m)}</option>)}</select>
       <select value={catF} onChange={e=>setCatF(e.target.value)} style={{...inp,fontSize:12}}><option value="">All categories</option>{usedCats.map(c=><option key={c} value={c}>{c}</option>)}</select>
       <select value={acctF} onChange={e=>setAcctF(e.target.value)} style={{...inp,fontSize:12}}><option value="">All accounts</option>{accts.map(a=><option key={a} value={a}>{a}</option>)}</select>
@@ -330,7 +321,7 @@ function TransactionsTab({transactions,onUpdate,onDelete,onAdd,categories,lastUp
     </div>
 
     <div style={{fontSize:12,color:"#888",marginBottom:8}}>{filtered.length} transactions</div>
-    <div style={{maxHeight:500,overflowY:"auto",border:"1px solid #eee",borderRadius:10}}>
+    <div className="ncb-table-scroll" style={{maxHeight:500,overflowY:"auto",border:"1px solid #eee",borderRadius:10}}>
       <table style={{width:"100%",borderCollapse:"collapse",fontSize:13}}>
         <thead><tr style={{background:"#f8f9fa",position:"sticky",top:0,zIndex:1}}>
           {["Date","Description","Amount","Category","Acct",""].map(h=><th key={h} style={{padding:"10px 12px",textAlign:"left",fontWeight:600,color:"#555",borderBottom:"2px solid #eee",fontSize:11,textTransform:"uppercase",letterSpacing:"0.05em"}}>{h}</th>)}
@@ -376,8 +367,8 @@ function BudgetTab({transactions,projections,setProjections,incomeProjections,se
     return r;
   },[monthlyHistory,categoryGroups,sel]);
 
-  return <div style={{padding:24}}>
-    <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:20,flexWrap:"wrap",gap:12}}>
+  return <div className="ncb-tab-content" style={{padding:24}}>
+    <div className="ncb-budget-header" style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:20,flexWrap:"wrap",gap:12}}>
       <div>
         <h2 style={{margin:0,fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Monthly Budget</h2>
         <div style={{fontSize:14,color:GRAY,marginTop:4}}>
@@ -393,7 +384,7 @@ function BudgetTab({transactions,projections,setProjections,incomeProjections,se
       </select>
     </div>
 
-    <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(155px,1fr))",gap:12,marginBottom:24}}>
+    <div className="ncb-card-grid" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(155px,1fr))",gap:12,marginBottom:24}}>
       <Card label="Cash on Hand" value={fmt(cash)} color={GREEN} sub={Object.entries(accounts).map(([n,a])=>`${n}: ${fmt(a.balance)}`).join(" · ")} />
       <Card label="Income Variance" value={(totInc-projInc>=0?"+":"")+fmt(totInc-projInc)} color={totInc>=projInc?GREEN:RED} />
       <Card label="Expense Variance" value={(totAct-totProj>0?"+":"")+fmt(totAct-totProj)} color={totAct<=totProj?GREEN:RED} />
@@ -404,7 +395,7 @@ function BudgetTab({transactions,projections,setProjections,incomeProjections,se
     <div style={{marginBottom:24}}>
       <Sec>Income</Sec>
       <div style={{background:"#f8f9fa",borderRadius:10,padding:16}}>
-        {Object.entries(incomeProjections).map(([s,v])=><div key={s} style={{display:"flex",alignItems:"center",gap:12,marginBottom:8}}>
+        {Object.entries(incomeProjections).map(([s,v])=><div key={s} className="ncb-income-row" style={{display:"flex",alignItems:"center",gap:12,marginBottom:8}}>
           <span style={{width:180,fontSize:13,color:"#444"}}>{s}</span>
           <input type="number" step="0.01" value={v} onChange={e=>setIncomeProjections(p=>({...p,[s]:e.target.value}))} style={{width:100,...inp,textAlign:"right"}} />
         </div>)}
@@ -421,7 +412,7 @@ function BudgetTab({transactions,projections,setProjections,incomeProjections,se
       const gA = cats.reduce((s,c)=>s+(actByCat[c]||0),0);
       const gD = gA-gP;
       return <div key={group} style={{marginBottom:20}}>
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
+        <div className="ncb-budget-group-header" style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
           <Sec>{group}</Sec>
           <div style={{display:"flex",gap:16,fontSize:12}}>
             <span style={{color:"#888"}}>Proj: <strong>{fmt(gP)}</strong></span>
@@ -430,20 +421,20 @@ function BudgetTab({transactions,projections,setProjections,incomeProjections,se
           </div>
         </div>
         <div style={{background:"#f8f9fa",borderRadius:10,overflow:"hidden"}}>
-          <div style={{display:"grid",gridTemplateColumns:"130px 80px 80px 72px 110px 1fr",padding:"6px 14px",fontSize:10,color:"#999",textTransform:"uppercase",letterSpacing:"0.06em",borderBottom:"1px solid #eee"}}>
-            <span>Category</span><span style={{textAlign:"right"}}>Projected</span><span style={{textAlign:"right"}}>Actual</span><span style={{textAlign:"right"}}>Var</span><span style={{textAlign:"center"}}>Hist. Range</span><span>Progress</span>
+          <div className="ncb-budget-cols" style={{display:"grid",gridTemplateColumns:"130px 80px 80px 72px 110px 1fr",padding:"6px 14px",fontSize:10,color:"#999",textTransform:"uppercase",letterSpacing:"0.06em",borderBottom:"1px solid #eee"}}>
+            <span>Category</span><span style={{textAlign:"right"}}>Projected</span><span style={{textAlign:"right"}}>Actual</span><span style={{textAlign:"right"}}>Var</span><span className="ncb-hist-col" style={{textAlign:"center"}}>Hist. Range</span><span className="ncb-progress-col">Progress</span>
           </div>
           {cats.map(cat=>{
             const p=parseFloat(projections[cat])||0, a=actByCat[cat]||0, d=a-p, pct=p>0?a/p:0;
             const h=ranges[cat];
-            return <div key={cat} style={{display:"grid",gridTemplateColumns:"130px 80px 80px 72px 110px 1fr",alignItems:"center",padding:"8px 14px",borderBottom:"1px solid #eee"}}>
+            return <div key={cat} className="ncb-budget-row" style={{display:"grid",gridTemplateColumns:"130px 80px 80px 72px 110px 1fr",alignItems:"center",padding:"8px 14px",borderBottom:"1px solid #eee"}}>
               <span style={{fontSize:13,color:"#444"}}>{cat}</span>
               <input type="number" step="0.01" value={projections[cat]??""} onChange={e=>setProjections(p=>({...p,[cat]:e.target.value}))}
                 style={{width:65,padding:"3px 6px",border:"1px solid #e0e0e0",borderRadius:5,fontSize:12,textAlign:"right",background:"#fff"}} />
               <span style={{fontSize:13,fontWeight:600,color:"#333",textAlign:"right",paddingRight:8}}>{a>0?fmt(a):"—"}</span>
               <span style={{fontSize:12,fontWeight:600,textAlign:"right",paddingRight:8,color:d>0?RED:d<0?GREEN:"#aaa"}}>{d?((d>0?"+":"")+fmt(d)):"—"}</span>
-              <span style={{fontSize:10,color:"#999",textAlign:"center"}} title={h?`${h.n} months of data`:""}>{h?`${fmtS(h.min)}–${fmtS(h.max)}`:"—"}</span>
-              <div style={{height:6,background:"#e9ecef",borderRadius:3,overflow:"hidden"}}>
+              <span className="ncb-hist-col" style={{fontSize:10,color:"#999",textAlign:"center"}} title={h?`${h.n} months of data`:""}>{h?`${fmtS(h.min)}–${fmtS(h.max)}`:"—"}</span>
+              <div className="ncb-progress-col" style={{height:6,background:"#e9ecef",borderRadius:3,overflow:"hidden"}}>
                 <div style={{height:"100%",borderRadius:3,width:`${Math.min(pct*100,100)}%`,background:pct>1?RED:pct>0.85?GOLD:GREEN,transition:"width 0.3s ease"}} />
               </div>
             </div>;
@@ -532,7 +523,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
 
   // Mortgage timeline
   const mtgTimeline = useMemo(()=>{
-    if (!showTL || !mortgage) return null;
+    if (!showTL || !mortgage || mortgage.balance <= 0) return null;
     // Calculate months until loans are done
     const loansFreedDate = timeline?.events.find(e=>e.type==="debtfree");
     const monthsToFreedom = loansFreedDate?.month || 0;
@@ -564,21 +555,21 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
     setLastUpdated(p=>({...p,debt:new Date().toISOString().split("T")[0]}));
   }
 
-  return <div style={{padding:24}}>
+  return <div className="ncb-tab-content" style={{padding:24}}>
     <div>
       <h2 style={{margin:"0 0 4px",fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Debt Strategy</h2>
-      <p style={{color:GRAY,margin:"0 0 4px",fontSize:14}}>Baby Step 2: Pay off all debt except the house. Surplus flows here.</p>
+      <p style={{color:GRAY,margin:"0 0 4px",fontSize:14}}>Primary Goal: Pay off all debt except the house. Surplus flows here.</p>
       <LastUpdated dates={{debt:lastUpdated.debt}} />
     </div>
 
-    <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:12,margin:"20px 0"}}>
+    <div className="ncb-card-grid" style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:12,margin:"20px 0"}}>
       <Card label="Total Debt (excl. mortgage)" value={fmt(totalDebt)} color={RED} />
       <Card label="Monthly Minimums" value={fmt(totalMin)} color={GRAY} />
       <Card label="Monthly Interest" value={fmt(monthInt)} color={GOLD} />
       <Card label="Current Surplus" value={fmt(surplus)} color={surplus>=0?GREEN:RED} />
     </div>
 
-    <div style={{display:"flex",gap:10,alignItems:"center",marginBottom:20,flexWrap:"wrap"}}>
+    <div className="ncb-debt-controls" style={{display:"flex",gap:10,alignItems:"center",marginBottom:20,flexWrap:"wrap"}}>
       {[["avalanche","🏔 Avalanche"],["snowball","⛄ Snowball"],["optimized","⚡ Optimized"]].map(([s,l])=>
         <button key={s} onClick={()=>setStrategy(s)} style={{padding:"8px 16px",borderRadius:20,fontSize:12,fontWeight:600,border:strategy===s?`2px solid ${GREEN}`:"1px solid #ddd",background:strategy===s?"rgba(26,86,50,0.08)":"#fff",color:strategy===s?GREEN:GRAY,cursor:"pointer"}}>{l}</button>
       )}
@@ -589,7 +580,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
     </div>
 
     {/* Loan table */}
-    <div style={{border:"1px solid #eee",borderRadius:10,overflow:"hidden",marginBottom:20}}>
+    <div className="ncb-table-scroll" style={{border:"1px solid #eee",borderRadius:10,overflow:"hidden",marginBottom:20}}>
       <table style={{width:"100%",borderCollapse:"collapse",fontSize:13}}>
         <thead><tr style={{background:"#f8f9fa"}}>
           {["Loan","Balance","Rate","Min Pay",strategy==="optimized"?"Efficiency":"Extra","Total",""].map(h=>
@@ -630,10 +621,10 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
     {/* Mortgage section */}
     <div style={{marginTop:24,marginBottom:20}}>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
-        <Sec>Baby Step 6: Mortgage</Sec>
+        <Sec>Mortgage</Sec>
         <button onClick={()=>setEditMtg(!editMtg)} style={{border:"none",background:"none",color:"#aaa",cursor:"pointer",fontSize:12}}>{editMtg?"done":"edit"}</button>
       </div>
-      <div style={{background:"#f8f9fa",borderRadius:10,padding:16}}>
+      <div className="ncb-mtg-grid" style={{background:"#f8f9fa",borderRadius:10,padding:16}}>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(140px,1fr))",gap:12}}>
           <div><div style={{fontSize:11,color:"#888",textTransform:"uppercase",marginBottom:4}}>Balance</div>
             {editMtg?<input type="number" step="0.01" value={mortgage.balance} onChange={e=>setMortgage(p=>({...p,balance:parseFloat(e.target.value)||0}))} style={{...inp,width:"100%",fontWeight:600}} />
@@ -671,7 +662,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
       </div>
       <div style={{padding:20}}>
         {/* Header row */}
-        <div style={{display:"grid",gridTemplateColumns:"100px 1fr 110px 110px",gap:8,marginBottom:12,fontSize:10,color:"#999",textTransform:"uppercase",letterSpacing:"0.06em",paddingBottom:8,borderBottom:"1px solid #eee"}}>
+        <div className="ncb-timeline-header-grid" style={{display:"grid",gridTemplateColumns:"100px 1fr 110px 110px",gap:8,marginBottom:12,fontSize:10,color:"#999",textTransform:"uppercase",letterSpacing:"0.06em",paddingBottom:8,borderBottom:"1px solid #eee"}}>
           <span>Scheduled End</span><span>Loan</span><span style={{textAlign:"right"}}>Revised Payoff</span><span style={{textAlign:"right"}}>Monthly Freed</span>
         </div>
         {timeline.events.filter(e=>e.type==="payoff"||e.type==="debtfree").map((ev,i)=>
@@ -679,7 +670,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
             <div style={{minWidth:100}}></div>
             <div style={{fontSize:16,fontWeight:700,color:GREEN}}>🎉 ALL LOANS PAID OFF — {ev.date}</div>
           </div>
-          : <div key={i} style={{display:"grid",gridTemplateColumns:"100px 1fr 110px 110px",gap:8,alignItems:"center",padding:"8px 0",borderBottom:"1px solid #f5f5f5"}}>
+          : <div key={i} className="ncb-timeline-row" style={{display:"grid",gridTemplateColumns:"100px 1fr 110px 110px",gap:8,alignItems:"center",padding:"8px 0",borderBottom:"1px solid #f5f5f5"}}>
             <span style={{fontSize:12,color:"#aaa"}}>{ev.origEnd||"—"}</span>
             <span style={{fontSize:14,fontWeight:600,color:"#333"}}>{ev.name}</span>
             <span style={{fontSize:14,fontWeight:700,color:GREEN,textAlign:"right"}}>{ev.date}</span>
@@ -690,7 +681,7 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
         {/* Annual snapshots */}
         <div style={{marginTop:20,borderTop:"1px solid #eee",paddingTop:16}}>
           <div style={{fontSize:12,fontWeight:600,color:"#888",textTransform:"uppercase",marginBottom:10}}>Annual Snapshots</div>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(140px,1fr))",gap:8}}>
+          <div className="ncb-snapshot-grid" style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(140px,1fr))",gap:8}}>
             {timeline.events.filter(e=>e.type==="snapshot").map((s,i)=>{
               const d=new Date(); d.setMonth(d.getMonth()+s.month);
               return <div key={i} style={{background:"#f8f9fa",borderRadius:8,padding:"10px 12px"}}>
@@ -704,8 +695,8 @@ function DebtTab({transactions,loans,setLoans,mortgage,setMortgage,lastUpdated,s
 
         {/* Mortgage projection */}
         {mtgTimeline && <div style={{marginTop:20,borderTop:"2px solid #e9ecef",paddingTop:16}}>
-          <div style={{fontSize:14,fontWeight:700,color:"#333",marginBottom:8}}>Baby Step 6: Mortgage Payoff</div>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:12}}>
+          <div style={{fontSize:14,fontWeight:700,color:"#333",marginBottom:8}}>Mortgage Payoff</div>
+          <div className="ncb-mtg-payoff-grid" style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:12}}>
             <div style={{background:"#f8f9fa",borderRadius:8,padding:"10px 12px"}}>
               <div style={{fontSize:11,color:"#888"}}>Scheduled End</div>
               <div style={{fontSize:15,fontWeight:700,color:GRAY}}>{mLabel(mortgage.endDate)}</div>
@@ -751,21 +742,21 @@ function CatMgr({categories,setCategories,categoryGroups,setCategoryGroups,proje
     setCategoryGroups(p=>({...p,[group]:p[group].filter(c=>c!==cat)}));
   }
 
-  return <div style={{padding:24}}>
+  return <div className="ncb-tab-content" style={{padding:24}}>
     <h2 style={{margin:"0 0 8px",fontSize:22,color:"#1a1a1a",fontFamily:FH}}>Manage Categories</h2>
     <p style={{color:GRAY,margin:"0 0 24px",fontSize:14}}>Add categories or create entirely new groups.</p>
 
     <div style={{marginBottom:24}}>
       <Sec>Add New Group</Sec>
-      <div style={{display:"flex",gap:10}}>
-        <input value={newG} onChange={e=>setNewG(e.target.value)} placeholder="e.g. NC Homeschooling" style={{...inp,width:220}} />
+      <div className="ncb-add-form" style={{display:"flex",gap:10}}>
+        <input value={newG} onChange={e=>setNewG(e.target.value)} placeholder="e.g. Travel" style={{...inp,width:220}} />
         <button onClick={addGroup} style={{padding:"8px 16px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add Group</button>
       </div>
     </div>
 
     <div style={{marginBottom:24}}>
       <Sec>Add Category to Group</Sec>
-      <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+      <div className="ncb-add-form" style={{display:"flex",gap:10,flexWrap:"wrap"}}>
         <input value={nc} onChange={e=>setNc(e.target.value)} placeholder="e.g. Oil Change" style={{...inp,width:180}} />
         <select value={ng} onChange={e=>setNg(e.target.value)} style={inp}><option value="">Add to group...</option>{Object.keys(categoryGroups).map(g=><option key={g} value={g}>{g}</option>)}</select>
         <button onClick={addCat} style={{padding:"8px 16px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add</button>
@@ -775,7 +766,7 @@ function CatMgr({categories,setCategories,categoryGroups,setCategoryGroups,proje
     <Sec>Current Structure</Sec>
     {Object.entries(categoryGroups).map(([g,cats])=><div key={g} style={{marginBottom:16}}>
       <div style={{fontSize:14,fontWeight:700,color:"#333",marginBottom:6}}>{g}</div>
-      <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+      <div className="ncb-cat-pills" style={{display:"flex",gap:8,flexWrap:"wrap"}}>
         {cats.map(c=><span key={c} style={{display:"inline-flex",alignItems:"center",gap:6,padding:"4px 12px",background:"#f0f0f0",borderRadius:16,fontSize:12,color:"#444"}}>
           {c}<button onClick={()=>removeCat(c,g)} style={{border:"none",background:"none",color:"#bbb",cursor:"pointer",fontSize:14}}>×</button>
         </span>)}
@@ -786,6 +777,247 @@ function CatMgr({categories,setCategories,categoryGroups,setCategoryGroups,proje
 }
 
 // ============================================================
+// ============================================================
+// SETTINGS TAB
+// ============================================================
+function SettingsTab({accounts,setAccounts,incomeProjections,setIncomeProjections,loans,setLoans,mortgage,setMortgage,projections,setProjections,categoryGroups,setLastUpdated}) {
+  const [section,setSection] = useState("accounts");
+  const [newAcct,setNewAcct] = useState("");
+  const [newIncSrc,setNewIncSrc] = useState("");
+  const [newLoan,setNewLoan] = useState({name:"",balance:"",rate:"",minPay:"",endDate:""});
+  const [editingLoan,setEditingLoan] = useState(null);
+  const [editMtg,setEditMtg] = useState(false);
+
+  function markUpdated() {
+    setLastUpdated(p=>({...p,settings:new Date().toISOString().split("T")[0]}));
+  }
+
+  function addAccount() {
+    const name = newAcct.trim();
+    if (!name || accounts[name]) return;
+    setAccounts(p=>({...p,[name]:{balance:0,lastUpdated:""}}));
+    setNewAcct(""); markUpdated();
+  }
+  function removeAccount(name) {
+    const u = {...accounts}; delete u[name]; setAccounts(u); markUpdated();
+  }
+  function updateAccountBalance(name, val) {
+    setAccounts(p=>({...p,[name]:{...p[name],balance:parseFloat(val)||0,lastUpdated:new Date().toISOString().split("T")[0]}}));
+    markUpdated();
+  }
+
+  function addIncSource() {
+    const name = newIncSrc.trim();
+    if (!name || incomeProjections[name] !== undefined) return;
+    setIncomeProjections(p=>({...p,[name]:0})); setNewIncSrc(""); markUpdated();
+  }
+  function removeIncSource(name) {
+    const u = {...incomeProjections}; delete u[name]; setIncomeProjections(u); markUpdated();
+  }
+  function updateIncSource(name, val) {
+    setIncomeProjections(p=>({...p,[name]:parseFloat(val)||0})); markUpdated();
+  }
+  function renameIncSource(oldName, newName) {
+    if (!newName.trim() || oldName === newName.trim()) return;
+    const entries = Object.entries(incomeProjections);
+    const updated = {};
+    for (const [k,v] of entries) updated[k===oldName ? newName.trim() : k] = v;
+    setIncomeProjections(updated); markUpdated();
+  }
+
+  function addLoan() {
+    if (!newLoan.name.trim() || !newLoan.balance) return;
+    const loan = {id:crypto.randomUUID(),name:newLoan.name.trim(),balance:parseFloat(newLoan.balance)||0,rate:parseFloat(newLoan.rate)||0,minPay:parseFloat(newLoan.minPay)||0,endDate:newLoan.endDate};
+    setLoans(p=>[...p, loan]); setNewLoan({name:"",balance:"",rate:"",minPay:"",endDate:""}); markUpdated();
+  }
+  function removeLoan(id) { setLoans(p=>p.filter(l=>l.id!==id)); markUpdated(); }
+  function updateLoan(id, field, val) {
+    setLoans(p=>p.map(l=>l.id===id ? {...l,[field]:field==="name"||field==="endDate" ? val : parseFloat(val)||0} : l));
+    markUpdated();
+  }
+
+  const sections = [
+    {id:"accounts", label:"🏦 Accounts"},
+    {id:"income", label:"💰 Income Sources"},
+    {id:"loans", label:"💳 Loans & Mortgage"},
+    {id:"projections", label:"📊 Budget Projections"},
+  ];
+
+  const sBtn = (id) => ({padding:"10px 16px",border:"none",borderRadius:8,cursor:"pointer",fontFamily:FB,fontSize:13,fontWeight:section===id?700:500,background:section===id?GREEN:"transparent",color:section===id?"#fff":GRAY,textAlign:"left",width:"100%",transition:"all 0.15s ease"});
+
+  const totalIncome = Object.values(incomeProjections).reduce((s,v)=>s+(parseFloat(v)||0),0);
+  const totalExpenses = Object.values(projections).reduce((s,v)=>s+(parseFloat(v)||0),0);
+  const totalDebt = loans.reduce((s,l)=>s+l.balance,0);
+  const cashOnHand = Object.values(accounts).reduce((s,a)=>s+(a.balance||0),0);
+
+  return <div className="ncb-settings-layout" style={{display:"grid",gridTemplateColumns:"180px 1fr",minHeight:600}}>
+    <div className="ncb-settings-sidebar" style={{borderRight:"1px solid #eee",padding:"24px 12px",display:"flex",flexDirection:"column",gap:4}}>
+      <div style={{fontSize:11,color:"#aaa",textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:8,paddingLeft:4}}>Settings</div>
+      {sections.map(s=>(<button key={s.id} onClick={()=>setSection(s.id)} style={sBtn(s.id)}>{s.label}</button>))}
+      <div className="ncb-settings-summary" style={{marginTop:"auto",padding:"12px 4px",borderTop:"1px solid #eee"}}>
+        <div style={{fontSize:11,color:"#aaa",textTransform:"uppercase",letterSpacing:"0.06em",marginBottom:8}}>Summary</div>
+        <div style={{fontSize:12,color:"#555",lineHeight:2}}>
+          <div>Cash: <strong style={{color:GREEN}}>{fmt(cashOnHand)}</strong></div>
+          <div>Monthly in: <strong style={{color:GREEN}}>{fmt(totalIncome)}</strong></div>
+          <div>Monthly out: <strong style={{color:totalExpenses>totalIncome?RED:GRAY}}>{fmt(totalExpenses)}</strong></div>
+          <div>Total debt: <strong style={{color:RED}}>{fmt(totalDebt)}</strong></div>
+        </div>
+      </div>
+    </div>
+    <div className="ncb-settings-content" style={{padding:28,overflowY:"auto"}}>
+
+      {section==="accounts" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Bank Accounts</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 24px"}}>Add the accounts you want to track. Balances update automatically when you import bank exports.</p>
+        {Object.keys(accounts).length===0 && <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:20,fontSize:13,color:"#888",textAlign:"center"}}>No accounts yet. Add your first one below.</div>}
+        <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:24}}>
+          {Object.entries(accounts).map(([name,info])=>(
+            <div key={name} className="ncb-acct-row" style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",background:"#f8f9fa",borderRadius:10}}>
+              <div style={{flex:1,fontSize:14,fontWeight:600,color:"#333"}}>{name}</div>
+              <div style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{fontSize:13,color:"#888"}}>$</span>
+                <input type="number" step="0.01" value={info.balance||""} onChange={e=>updateAccountBalance(name,e.target.value)} style={{width:110,padding:"5px 8px",border:"1px solid #ddd",borderRadius:6,fontSize:13,fontWeight:600}} />
+              </div>
+              {info.lastUpdated && <span style={{fontSize:11,color:"#aaa"}}>Updated {info.lastUpdated}</span>}
+              <button onClick={()=>removeAccount(name)} style={{border:"none",background:"none",color:"#ccc",cursor:"pointer",fontSize:18,lineHeight:1}}>×</button>
+            </div>
+          ))}
+        </div>
+        <div className="ncb-add-form" style={{display:"flex",gap:10,alignItems:"center"}}>
+          <input value={newAcct} onChange={e=>setNewAcct(e.target.value)} onKeyDown={e=>e.key==="Enter"&&addAccount()} placeholder="Account name (e.g. Chase Checking)" style={{...inp,width:240}} />
+          <button onClick={addAccount} style={{padding:"8px 18px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add Account</button>
+        </div>
+      </div>}
+
+      {section==="income" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Income Sources</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 24px"}}>Your projected monthly income amounts used in budget calculations.</p>
+        {Object.keys(incomeProjections).length===0 && <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:20,fontSize:13,color:"#888",textAlign:"center"}}>No income sources yet. Add your first one below.</div>}
+        <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:24}}>
+          {Object.entries(incomeProjections).map(([name,val])=>(
+            <div key={name} className="ncb-income-row" style={{display:"flex",alignItems:"center",gap:12,padding:"12px 16px",background:"#f8f9fa",borderRadius:10}}>
+              <input defaultValue={name} onBlur={e=>renameIncSource(name,e.target.value)} style={{flex:1,border:"none",background:"transparent",fontSize:14,fontWeight:600,color:"#333",outline:"none",cursor:"text"}} title="Click to rename" />
+              <div style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{fontSize:13,color:"#888"}}>$/mo</span>
+                <input type="number" step="0.01" value={val||""} onChange={e=>updateIncSource(name,e.target.value)} style={{width:110,padding:"5px 8px",border:"1px solid #ddd",borderRadius:6,fontSize:13,fontWeight:600}} />
+              </div>
+              <button onClick={()=>removeIncSource(name)} style={{border:"none",background:"none",color:"#ccc",cursor:"pointer",fontSize:18,lineHeight:1}}>×</button>
+            </div>
+          ))}
+        </div>
+        <div style={{padding:"10px 16px",background:"rgba(26,86,50,0.06)",borderRadius:8,marginBottom:20,fontSize:13}}>
+          Total projected monthly income: <strong style={{color:GREEN}}>{fmt(totalIncome)}</strong>
+        </div>
+        <div className="ncb-add-form" style={{display:"flex",gap:10,alignItems:"center"}}>
+          <input value={newIncSrc} onChange={e=>setNewIncSrc(e.target.value)} onKeyDown={e=>e.key==="Enter"&&addIncSource()} placeholder="Source name (e.g. Adam Salary)" style={{...inp,width:240}} />
+          <button onClick={addIncSource} style={{padding:"8px 18px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer"}}>Add Source</button>
+        </div>
+      </div>}
+
+      {section==="loans" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Loans & Mortgage</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 24px"}}>All debts tracked in the Debt Strategy tab. Add each loan for accurate payoff projections.</p>
+        {loans.length===0 ? <div style={{padding:20,background:"#f8f9fa",borderRadius:10,marginBottom:20,fontSize:13,color:"#888",textAlign:"center"}}>No loans added yet.</div>
+        : <div className="ncb-table-scroll" style={{border:"1px solid #eee",borderRadius:10,overflow:"hidden",marginBottom:24}}>
+            <table style={{width:"100%",borderCollapse:"collapse",fontSize:13}}>
+              <thead><tr style={{background:"#f8f9fa"}}>
+                {["Name","Balance","Rate %","Min Pay","End Date",""].map(h=>(<th key={h} style={{padding:"10px 12px",textAlign:h==="Name"?"left":"right",fontWeight:600,color:"#555",borderBottom:"2px solid #eee",fontSize:11,textTransform:"uppercase"}}>{h}</th>))}
+              </tr></thead>
+              <tbody>
+                {loans.map(loan=>{
+                  const isE = editingLoan===loan.id;
+                  return <tr key={loan.id} style={{borderBottom:"1px solid #f0f0f0"}}>
+                    <td style={{padding:"10px 12px"}}>{isE?<input value={loan.name} onChange={e=>updateLoan(loan.id,"name",e.target.value)} style={{...inp,width:130}} />:<span style={{fontWeight:500,color:"#333"}}>{loan.name}</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="number" step="0.01" value={loan.balance} onChange={e=>updateLoan(loan.id,"balance",e.target.value)} style={{...inp,width:90,textAlign:"right"}} />:<span style={{color:RED,fontWeight:600}}>{fmt(loan.balance)}</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="number" step="0.01" value={loan.rate} onChange={e=>updateLoan(loan.id,"rate",e.target.value)} style={{...inp,width:60,textAlign:"right"}} />:<span style={{color:GRAY}}>{loan.rate}%</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="number" step="0.01" value={loan.minPay} onChange={e=>updateLoan(loan.id,"minPay",e.target.value)} style={{...inp,width:80,textAlign:"right"}} />:<span>{fmt(loan.minPay)}</span>}</td>
+                    <td style={{padding:"10px 12px",textAlign:"right"}}>{isE?<input type="month" value={loan.endDate} onChange={e=>updateLoan(loan.id,"endDate",e.target.value)} style={inp} />:<span style={{color:GRAY,fontSize:12}}>{loan.endDate||"—"}</span>}</td>
+                    <td style={{padding:"10px 8px",textAlign:"right",whiteSpace:"nowrap"}}>
+                      <button onClick={()=>setEditingLoan(isE?null:loan.id)} style={{border:"none",background:"none",color:isE?GREEN:"#aaa",cursor:"pointer",fontSize:12,fontWeight:600,marginRight:6}}>{isE?"done":"edit"}</button>
+                      <button onClick={()=>removeLoan(loan.id)} style={{border:"none",background:"none",color:"#ccc",cursor:"pointer",fontSize:16}}>×</button>
+                    </td>
+                  </tr>;
+                })}
+              </tbody>
+              <tfoot><tr style={{background:"#f8f9fa",fontWeight:700}}>
+                <td style={{padding:"10px 12px"}}>TOTAL</td>
+                <td style={{padding:"10px 12px",textAlign:"right",color:RED}}>{fmt(loans.reduce((s,l)=>s+l.balance,0))}</td>
+                <td colSpan={4}></td>
+              </tr></tfoot>
+            </table>
+          </div>}
+        <div style={{background:"#f8f9fa",borderRadius:10,padding:16,marginBottom:32}}>
+          <div style={{fontSize:13,fontWeight:600,color:"#444",marginBottom:12}}>Add a Loan</div>
+          <div className="ncb-loan-add-form" style={{display:"flex",gap:10,flexWrap:"wrap",alignItems:"flex-end"}}>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Name</label><input value={newLoan.name} onChange={e=>setNewLoan({...newLoan,name:e.target.value})} placeholder="e.g. Student Loan A" style={{...inp,width:160}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Balance</label><input type="number" step="0.01" value={newLoan.balance} onChange={e=>setNewLoan({...newLoan,balance:e.target.value})} placeholder="0.00" style={{...inp,width:90}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Rate %</label><input type="number" step="0.01" value={newLoan.rate} onChange={e=>setNewLoan({...newLoan,rate:e.target.value})} placeholder="0.00" style={{...inp,width:70}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>Min Pay</label><input type="number" step="0.01" value={newLoan.minPay} onChange={e=>setNewLoan({...newLoan,minPay:e.target.value})} placeholder="0.00" style={{...inp,width:80}} /></div>
+            <div><label style={{fontSize:11,color:GRAY,display:"block",marginBottom:3}}>End Date</label><input type="month" value={newLoan.endDate} onChange={e=>setNewLoan({...newLoan,endDate:e.target.value})} style={inp} /></div>
+            <button onClick={addLoan} style={{padding:"8px 18px",border:"none",borderRadius:6,background:GREEN,color:"#fff",fontWeight:600,fontSize:13,cursor:"pointer",alignSelf:"flex-end"}}>Add Loan</button>
+          </div>
+        </div>
+        <div style={{borderTop:"2px solid #eee",paddingTop:24}}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:16}}>
+            <div>
+              <div style={{fontSize:16,fontWeight:700,color:"#1a1a1a",fontFamily:FH}}>Mortgage</div>
+              <div style={{fontSize:12,color:GRAY,marginTop:2}}>Tracked separately — paid off last.</div>
+            </div>
+            <button onClick={()=>setEditMtg(!editMtg)} style={{border:`1px solid ${editMtg?GREEN:"#ddd"}`,background:editMtg?"rgba(26,86,50,0.08)":"#fff",color:editMtg?GREEN:GRAY,borderRadius:6,padding:"6px 14px",fontSize:12,fontWeight:600,cursor:"pointer"}}>{editMtg?"Save":"Edit"}</button>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))",gap:12}}>
+            {[{label:"Balance",field:"balance"},{label:"Interest Rate %",field:"rate"},{label:"Monthly Payment",field:"minPay"}].map(({label,field})=>(
+              <div key={field} style={{background:"#f8f9fa",borderRadius:10,padding:"12px 16px"}}>
+                <div style={{fontSize:11,color:"#888",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>{label}</div>
+                {editMtg?<input type="number" step="0.01" value={mortgage[field]||""} onChange={e=>setMortgage(p=>({...p,[field]:parseFloat(e.target.value)||0}))} style={{...inp,width:"100%",fontSize:15,fontWeight:700}} />
+                :<div style={{fontSize:18,fontWeight:700,color:field==="balance"?RED:"#333"}}>{field==="rate"?`${mortgage[field]||0}%`:`${fmt(mortgage[field]||0)}`}</div>}
+              </div>
+            ))}
+            <div style={{background:"#f8f9fa",borderRadius:10,padding:"12px 16px"}}>
+              <div style={{fontSize:11,color:"#888",textTransform:"uppercase",letterSpacing:"0.05em",marginBottom:6}}>Payoff Date</div>
+              {editMtg?<input type="month" value={mortgage.endDate||""} onChange={e=>setMortgage(p=>({...p,endDate:e.target.value}))} style={{...inp,width:"100%"}} />
+              :<div style={{fontSize:18,fontWeight:700,color:GRAY}}>{mortgage.endDate?mLabel(mortgage.endDate):"—"}</div>}
+            </div>
+          </div>
+        </div>
+      </div>}
+
+      {section==="projections" && <div>
+        <h2 style={{margin:"0 0 6px",fontSize:20,fontFamily:FH,color:"#1a1a1a"}}>Budget Projections</h2>
+        <p style={{color:GRAY,fontSize:13,margin:"0 0 8px"}}>Set your expected monthly spend per category. These are your targets in the Budget tab.</p>
+        <p style={{color:GRAY,fontSize:12,margin:"0 0 24px",fontStyle:"italic"}}>To add or remove categories, use the Categories tab.</p>
+        {Object.keys(categoryGroups).length===0
+          ? <div style={{padding:20,background:"#f8f9fa",borderRadius:10,fontSize:13,color:"#888",textAlign:"center"}}>No categories yet. Add some in the Categories tab first.</div>
+          : Object.entries(categoryGroups).map(([group,cats])=>{
+              const groupTotal = cats.reduce((s,c)=>s+(parseFloat(projections[c])||0),0);
+              return <div key={group} style={{marginBottom:24}}>
+                <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
+                  <Sec>{group}</Sec>
+                  <span style={{fontSize:12,color:GRAY}}>Total: <strong>{fmt(groupTotal)}</strong>/mo</span>
+                </div>
+                <div style={{background:"#f8f9fa",borderRadius:10,overflow:"hidden"}}>
+                  {cats.map((cat,i)=>(
+                    <div key={cat} style={{display:"flex",alignItems:"center",gap:12,padding:"10px 16px",borderBottom:i<cats.length-1?"1px solid #eee":"none"}}>
+                      <span style={{flex:1,fontSize:13,color:"#444"}}>{cat}</span>
+                      <div style={{display:"flex",alignItems:"center",gap:6}}>
+                        <span style={{fontSize:12,color:"#aaa"}}>$/mo</span>
+                        <input type="number" step="0.01" value={projections[cat]??""} onChange={e=>setProjections(p=>({...p,[cat]:e.target.value}))} placeholder="0.00" style={{width:90,padding:"5px 8px",border:"1px solid #ddd",borderRadius:6,fontSize:13,textAlign:"right"}} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>;
+            })}
+        <div style={{padding:"12px 16px",background:"rgba(26,86,50,0.06)",borderRadius:8,marginTop:8,fontSize:13}}>
+          Total projected expenses: <strong style={{color:totalExpenses>totalIncome&&totalIncome>0?RED:GREEN}}>{fmt(totalExpenses)}</strong>
+          {totalIncome>0 && <span style={{color:GRAY,marginLeft:8}}>vs. {fmt(totalIncome)} income → <strong style={{color:(totalIncome-totalExpenses)>=0?GREEN:RED}}>{fmt(totalIncome-totalExpenses)}</strong></span>}
+        </div>
+      </div>}
+
+    </div>
+  </div>;
+}
+
 // MAIN APP
 // ============================================================
 export default function App() {
@@ -800,7 +1032,7 @@ export default function App() {
   const [categoryGroups,setCategoryGroups] = useState(DEFAULT_GROUPS);
   const [accounts,setAccounts] = useState(DEFAULT_ACCTS);
   const [monthlyHistory,setMonthlyHistory] = useState(SEED_HISTORY);
-  const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:""});
+  const [lastUpdated,setLastUpdated] = useState({import:"",transactions:"",budget:"",debt:"",settings:""});
 
   useEffect(()=>{
     async function init() {
@@ -859,27 +1091,96 @@ export default function App() {
 
   return <div style={{fontFamily:FB,maxWidth:1100,margin:"0 auto",background:"#fff",minHeight:"100vh"}}>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <style>{`
+      /* ── Responsive overrides ── */
+      /* Tablet: ≤768px */
+      @media (max-width: 768px) {
+        .ncb-root { padding: 0 !important; }
+        .ncb-header { padding: 16px 16px !important; flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+        .ncb-header h1 { font-size: 20px !important; }
+        .ncb-tabs { padding-left: 4px !important; gap: 0 !important; -webkit-overflow-scrolling: touch; }
+        .ncb-tabs button { padding: 10px 12px !important; font-size: 12px !important; white-space: nowrap !important; }
+        .ncb-tab-content { padding: 16px !important; }
+        .ncb-card-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .ncb-settings-layout { grid-template-columns: 1fr !important; min-height: auto !important; }
+        .ncb-settings-sidebar { border-right: none !important; border-bottom: 1px solid #eee !important; padding: 12px !important; flex-direction: row !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+        .ncb-settings-sidebar > div:first-child { display: none !important; }
+        .ncb-settings-sidebar button { white-space: nowrap !important; width: auto !important; }
+        .ncb-settings-sidebar .ncb-settings-summary { display: none !important; }
+        .ncb-settings-content { padding: 16px !important; }
+        .ncb-budget-header { flex-direction: column !important; align-items: flex-start !important; gap: 10px !important; }
+        .ncb-budget-group-header { flex-direction: column !important; align-items: flex-start !important; gap: 4px !important; }
+        .ncb-budget-row { grid-template-columns: 1fr 70px 70px 60px !important; font-size: 12px !important; }
+        .ncb-budget-row .ncb-hist-col, .ncb-budget-row .ncb-progress-col { display: none !important; }
+        .ncb-budget-cols { grid-template-columns: 1fr 70px 70px 60px !important; }
+        .ncb-budget-cols .ncb-hist-col, .ncb-budget-cols .ncb-progress-col { display: none !important; }
+        .ncb-debt-controls { flex-direction: column !important; align-items: flex-start !important; }
+        .ncb-debt-controls > div:last-child { margin-left: 0 !important; width: 100% !important; }
+        .ncb-timeline-header-grid { grid-template-columns: 80px 1fr 90px 90px !important; }
+        .ncb-timeline-row { grid-template-columns: 80px 1fr 90px 90px !important; }
+        .ncb-mtg-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .ncb-table-scroll { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+        .ncb-table-scroll table { min-width: 580px !important; }
+        .ncb-filter-row select, .ncb-filter-row input { font-size: 12px !important; }
+        .ncb-add-form { flex-direction: column !important; align-items: stretch !important; }
+        .ncb-add-form > div { width: 100% !important; }
+        .ncb-add-form input, .ncb-add-form select { width: 100% !important; }
+        .ncb-loan-add-form { flex-direction: column !important; align-items: stretch !important; }
+        .ncb-loan-add-form > div { width: 100% !important; }
+        .ncb-loan-add-form input { width: 100% !important; }
+        .ncb-income-row { flex-direction: column !important; align-items: stretch !important; gap: 8px !important; }
+        .ncb-income-row input[type="number"] { width: 100% !important; }
+        .ncb-income-row span { width: auto !important; }
+      }
 
-    <div style={{padding:"20px 24px",borderBottom:"1px solid #eee",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+      /* Phone: ≤480px */
+      @media (max-width: 480px) {
+        .ncb-header h1 { font-size: 18px !important; }
+        .ncb-tabs button { padding: 8px 10px !important; font-size: 11px !important; }
+        .ncb-card-grid { grid-template-columns: 1fr !important; }
+        .ncb-budget-row { grid-template-columns: 1fr 60px 60px 50px !important; gap: 4px !important; padding: 6px 10px !important; }
+        .ncb-budget-cols { grid-template-columns: 1fr 60px 60px 50px !important; }
+        .ncb-budget-row input { width: 50px !important; font-size: 11px !important; }
+        .ncb-budget-row span { font-size: 11px !important; }
+        .ncb-timeline-header-grid { grid-template-columns: 60px 1fr 80px !important; }
+        .ncb-timeline-header-grid > span:last-child { display: none !important; }
+        .ncb-timeline-row { grid-template-columns: 60px 1fr 80px !important; }
+        .ncb-timeline-row > span:last-child { display: none !important; }
+        .ncb-mtg-grid { grid-template-columns: 1fr 1fr !important; }
+        .ncb-snapshot-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .ncb-mtg-payoff-grid { grid-template-columns: 1fr !important; }
+        .ncb-acct-row { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+        .ncb-acct-row input[type="number"] { width: 100% !important; }
+        .ncb-filter-bar { gap: 4px !important; }
+        .ncb-filter-bar button { padding: 4px 10px !important; font-size: 11px !important; }
+        .ncb-cat-pills { gap: 6px !important; }
+        .ncb-drop-zone { padding: 32px 16px !important; }
+        .ncb-settings-sidebar { gap: 4px !important; }
+      }
+    `}</style>
+
+    <div className="ncb-header" style={{padding:"20px 24px",borderBottom:"1px solid #eee",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
       <div>
-        <h1 style={{margin:0,fontSize:24,fontFamily:FH,color:"#1a1a1a",fontWeight:700,letterSpacing:"-0.02em"}}>Mercier Budget</h1>
+        <h1 style={{margin:0,fontSize:24,fontFamily:FH,color:"#1a1a1a",fontWeight:700,letterSpacing:"-0.02em"}}>Next Chapter Budget</h1>
         <div style={{fontSize:12,color:"#888",marginTop:2}}>{transactions.length} transactions · {Object.keys(monthlyHistory).length} months of history</div>
       </div>
       <div style={{fontSize:13,color:GREEN,fontWeight:600}}>Cash: {fmt(Object.values(accounts).reduce((s,a)=>s+(a.balance||0),0))}</div>
     </div>
 
-    <div style={{display:"flex",borderBottom:"1px solid #eee",paddingLeft:12,overflowX:"auto"}}>
+    <div className="ncb-tabs" style={{display:"flex",borderBottom:"1px solid #eee",paddingLeft:12,overflowX:"auto"}}>
       <Tab active={tab==="import"} onClick={()=>setTab("import")}>Import</Tab>
       <Tab active={tab==="transactions"} onClick={()=>setTab("transactions")} badge={unmatched}>Transactions</Tab>
       <Tab active={tab==="budget"} onClick={()=>setTab("budget")}>Budget</Tab>
       <Tab active={tab==="debt"} onClick={()=>setTab("debt")}>Debt Strategy</Tab>
       <Tab active={tab==="categories"} onClick={()=>setTab("categories")}>Categories</Tab>
+      <Tab active={tab==="settings"} onClick={()=>setTab("settings")}>⚙ Settings</Tab>
     </div>
 
     {tab==="import" && <ImportTab onImport={tx=>setTransactions(p=>[...p,...tx])} transactions={transactions} accounts={accounts} setAccounts={setAccounts} setLastUpdated={setLastUpdated} />}
-    {tab==="transactions" && <TransactionsTab transactions={transactions} onUpdate={(id,u)=>setTransactions(p=>p.map(t=>t.id===id?{...t,...u}:t))} onDelete={id=>setTransactions(p=>p.filter(t=>t.id!==id))} onAdd={tx=>setTransactions(p=>[...p,tx])} categories={categories} lastUpdated={lastUpdated} setLastUpdated={setLastUpdated} />}
+    {tab==="transactions" && <TransactionsTab transactions={transactions} onUpdate={(id,u)=>setTransactions(p=>p.map(t=>t.id===id?{...t,...u}:t))} onDelete={id=>setTransactions(p=>p.filter(t=>t.id!==id))} onAdd={tx=>setTransactions(p=>[...p,tx])} categories={categories} accounts={accounts} lastUpdated={lastUpdated} setLastUpdated={setLastUpdated} />}
     {tab==="budget" && <BudgetTab transactions={transactions} projections={projections} setProjections={setProjections} incomeProjections={incomeProjections} setIncomeProjections={setIncomeProjections} categoryGroups={categoryGroups} accounts={accounts} monthlyHistory={monthlyHistory} lastUpdated={lastUpdated} />}
     {tab==="debt" && <DebtTab transactions={transactions} loans={loans} setLoans={setLoans} mortgage={mortgage} setMortgage={setMortgage} lastUpdated={lastUpdated} setLastUpdated={setLastUpdated} />}
     {tab==="categories" && <CatMgr categories={categories} setCategories={setCategories} categoryGroups={categoryGroups} setCategoryGroups={setCategoryGroups} projections={projections} setProjections={setProjections} />}
+    {tab==="settings" && <SettingsTab accounts={accounts} setAccounts={setAccounts} incomeProjections={incomeProjections} setIncomeProjections={setIncomeProjections} loans={loans} setLoans={setLoans} mortgage={mortgage} setMortgage={setMortgage} projections={projections} setProjections={setProjections} categoryGroups={categoryGroups} setLastUpdated={setLastUpdated} />}
   </div>;
 }
